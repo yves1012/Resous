@@ -1,0 +1,559 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>04 DHCP与PXE：IP是怎么来的，又是怎么没的 · 一期一会</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="元稹">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="protocol_3.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../http:/photo.hugethanks.cn/resous_logo.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../http:/photo.hugethanks.cn/resous_logo.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../http:/photo.hugethanks.cn/resous_logo.ico'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../http:/photo.hugethanks.cn/resous_logo.ico">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../http:/photo.hugethanks.cn/resous_logo.ico">
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    关于我们
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    趣谈网络协议
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="protocol_1.html">
+            
+                <a href="protocol_1.html">
+            
+                    
+                    01 为什么要学习网络协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="protocol_2.html">
+            
+                <a href="protocol_2.html">
+            
+                    
+                    02 网络分层的真实含义是什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="protocol_3.html">
+            
+                <a href="protocol_3.html">
+            
+                    
+                    03 ifconfig：最熟悉又陌生的命令行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.4" data-path="protocol_4.html">
+            
+                <a href="protocol_4.html">
+            
+                    
+                    04 DHCP与PXE：IP是怎么来的，又是怎么没的
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    奇淫巧技
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../tips/google_email.html">
+            
+                <a href="../tips/google_email.html">
+            
+                    
+                    怎么申请谷歌邮箱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../tips/vps.html">
+            
+                <a href="../tips/vps.html">
+            
+                    
+                    如何科学上网
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    资源共享
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../resource/resume.html">
+            
+                <a href="../resource/resume.html">
+            
+                    
+                    简历模板大合集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../resource/software_pc.html">
+            
+                <a href="../resource/software_pc.html">
+            
+                    
+                    电脑装机软件合集
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >04 DHCP与PXE：IP是怎么来的，又是怎么没的</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#dhcp&#x4E0E;pxe&#xFF1A;ip&#x662F;&#x600E;&#x4E48;&#x6765;&#x7684;&#xFF0C;&#x53C8;&#x662F;&#x600E;&#x4E48;&#x6CA1;&#x7684;"><b></b>DHCP&#x4E0E;PXE&#xFF1A;IP&#x662F;&#x600E;&#x4E48;&#x6765;&#x7684;&#xFF0C;&#x53C8;&#x662F;&#x600E;&#x4E48;&#x6CA1;&#x7684;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5982;&#x4F55;&#x914D;&#x7F6E;-ip-&#x5730;&#x5740;"><b></b>&#x5982;&#x4F55;&#x914D;&#x7F6E; IP &#x5730;&#x5740;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;-net-tools"><b></b>&#x4F7F;&#x7528; net-tools</a></li><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;-iproute2"><b></b>&#x4F7F;&#x7528; iproute2</a></li></ul><li><span class="title-icon "></span><a href="#&#x52A8;&#x6001;&#x4E3B;&#x673A;&#x914D;&#x7F6E;&#x534F;&#x8BAE;&#xFF08;dhcp&#xFF09;"><b></b>&#x52A8;&#x6001;&#x4E3B;&#x673A;&#x914D;&#x7F6E;&#x534F;&#x8BAE;&#xFF08;DHCP&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x89E3;&#x6790;-dhcp-&#x7684;&#x5DE5;&#x4F5C;&#x65B9;&#x5F0F;"><b></b>&#x89E3;&#x6790; DHCP &#x7684;&#x5DE5;&#x4F5C;&#x65B9;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#ip-&#x5730;&#x5740;&#x7684;&#x6536;&#x56DE;&#x548C;&#x7EED;&#x79DF;"><b></b>IP &#x5730;&#x5740;&#x7684;&#x6536;&#x56DE;&#x548C;&#x7EED;&#x79DF;</a></li><li><span class="title-icon "></span><a href="#&#x9884;&#x542F;&#x52A8;&#x6267;&#x884C;&#x73AF;&#x5883;&#xFF08;pxe&#xFF09;"><b></b>&#x9884;&#x542F;&#x52A8;&#x6267;&#x884C;&#x73AF;&#x5883;&#xFF08;PXE&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x89E3;&#x6790;-pxe-&#x7684;&#x5DE5;&#x4F5C;&#x8FC7;&#x7A0B;"><b></b>&#x89E3;&#x6790; PXE &#x7684;&#x5DE5;&#x4F5C;&#x8FC7;&#x7A0B;</a></li><li><span class="title-icon "></span><a href="#&#x5C0F;&#x7ED3;"><b></b>&#x5C0F;&#x7ED3;</a></li></ul></ul></div><h1 id="dhcp&#x4E0E;pxe&#xFF1A;ip&#x662F;&#x600E;&#x4E48;&#x6765;&#x7684;&#xFF0C;&#x53C8;&#x662F;&#x600E;&#x4E48;&#x6CA1;&#x7684;"><a name="dhcp&#x4E0E;pxe&#xFF1A;ip&#x662F;&#x600E;&#x4E48;&#x6765;&#x7684;&#xFF0C;&#x53C8;&#x662F;&#x600E;&#x4E48;&#x6CA1;&#x7684;" class="anchor-navigation-ex-anchor" href="#dhcp&#x4E0E;pxe&#xFF1A;ip&#x662F;&#x600E;&#x4E48;&#x6765;&#x7684;&#xFF0C;&#x53C8;&#x662F;&#x600E;&#x4E48;&#x6CA1;&#x7684;"><i class="fa fa-link" aria-hidden="true"></i></a>DHCP&#x4E0E;PXE&#xFF1A;IP&#x662F;&#x600E;&#x4E48;&#x6765;&#x7684;&#xFF0C;&#x53C8;&#x662F;&#x600E;&#x4E48;&#x6CA1;&#x7684;</h1>
+<p>&#x4E0A;&#x4E00;&#x8282;&#xFF0C;&#x6211;&#x4EEC;&#x8BB2;&#x4E86; IP &#x7684;&#x4E00;&#x4E9B;&#x57FA;&#x672C;&#x6982;&#x5FF5;&#x3002;&#x5982;&#x679C;&#x9700;&#x8981;&#x548C;&#x5176;&#x4ED6;&#x673A;&#x5668;&#x901A;&#x8BAF;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x901A;&#x8BAF;&#x5730;&#x5740;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7ED9;&#x7F51;&#x5361;&#x914D;&#x7F6E;&#x8FD9;&#x4E48;&#x4E00;&#x4E2A;&#x5730;&#x5740;&#x3002;</p>
+<h2 id="&#x5982;&#x4F55;&#x914D;&#x7F6E;-ip-&#x5730;&#x5740;"><a name="&#x5982;&#x4F55;&#x914D;&#x7F6E;-ip-&#x5730;&#x5740;" class="anchor-navigation-ex-anchor" href="#&#x5982;&#x4F55;&#x914D;&#x7F6E;-ip-&#x5730;&#x5740;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5982;&#x4F55;&#x914D;&#x7F6E; IP &#x5730;&#x5740;</h2>
+<p>&#x90A3;&#x5982;&#x4F55;&#x914D;&#x7F6E;&#x5462;&#xFF1F;&#x5982;&#x679C;&#x6709;&#x76F8;&#x5173;&#x7684;&#x77E5;&#x8BC6;&#x548C;&#x79EF;&#x7D2F;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x7528;&#x547D;&#x4EE4;&#x884C;&#x81EA;&#x5DF1;&#x914D;&#x7F6E;&#x4E00;&#x4E2A;&#x5730;&#x5740;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; ifconfig&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; ip addr&#x3002;&#x8BBE;&#x7F6E;&#x597D;&#x4E86;&#x4EE5;&#x540E;&#xFF0C;&#x7528;&#x8FD9;&#x4E24;&#x4E2A;&#x547D;&#x4EE4;&#xFF0C;&#x5C06;&#x7F51;&#x5361; up &#x4E00;&#x4E0B;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5F00;&#x59CB;&#x5DE5;&#x4F5C;&#x4E86;&#x3002;</p>
+<h3 id="&#x4F7F;&#x7528;-net-tools"><a name="&#x4F7F;&#x7528;-net-tools" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;-net-tools"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x7528; net-tools</h3>
+<pre class="language-"><code>$ sudo ifconfig eth1 10.0.0.1/24
+$ sudo ifconfig eth1 up
+</code></pre><h3 id="&#x4F7F;&#x7528;-iproute2"><a name="&#x4F7F;&#x7528;-iproute2" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;-iproute2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x7528; iproute2</h3>
+<pre class="language-"><code>$ sudo ip addr add 10.0.0.1/24 dev eth1
+$ sudo ip link set up eth1
+</code></pre><p>&#x4F60;&#x53EF;&#x80FD;&#x4F1A;&#x95EE;&#x4E86;&#xFF0C;&#x81EA;&#x5DF1;&#x914D;&#x7F6E;&#x8FD9;&#x4E2A;&#x81EA;&#x7531;&#x5EA6;&#x592A;&#x5927;&#x4E86;&#x5427;&#xFF0C;&#x6211;&#x662F;&#x4E0D;&#x662F;&#x914D;&#x7F6E;&#x4EC0;&#x4E48;&#x90FD;&#x53EF;&#x4EE5;&#xFF1F;&#x5982;&#x679C;&#x914D;&#x7F6E;&#x4E00;&#x4E2A;&#x548C;&#x8C01;&#x90FD;&#x4E0D;&#x642D;&#x8FB9;&#x7684;&#x5730;&#x5740;&#x5462;&#xFF1F;&#x4F8B;&#x5982;&#xFF0C;&#x65C1;&#x8FB9;&#x7684;&#x673A;&#x5668;&#x90FD;&#x662F; 192.168.1.x&#xFF0C;&#x6211;&#x975E;&#x5F97;&#x914D;&#x7F6E;&#x4E00;&#x4E2A; 16.158.23.6&#xFF0C;&#x4F1A;&#x51FA;&#x73B0;&#x4EC0;&#x4E48;&#x73B0;&#x8C61;&#x5462;&#xFF1F;</p>
+<p>&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x4EFB;&#x4F55;&#x73B0;&#x8C61;&#xFF0C;&#x5C31;&#x662F;&#x5305;&#x53D1;&#x4E0D;&#x51FA;&#x53BB;&#x5457;&#x3002;&#x4E3A;&#x4EC0;&#x4E48;&#x53D1;&#x4E0D;&#x51FA;&#x53BB;&#x5462;&#xFF1F;&#x6211;&#x6765;&#x4E3E;&#x4F8B;&#x8BF4;&#x660E;&#x3002;</p>
+<p>192.168.1.6 &#x5C31;&#x5728;&#x4F60;&#x8FD9;&#x53F0;&#x673A;&#x5668;&#x7684;&#x65C1;&#x8FB9;&#xFF0C;&#x751A;&#x81F3;&#x662F;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x4EA4;&#x6362;&#x673A;&#x4E0A;&#xFF0C;&#x800C;&#x4F60;&#x628A;&#x673A;&#x5668;&#x7684;&#x5730;&#x5740;&#x8BBE;&#x4E3A;&#x4E86; 16.158.23.6&#x3002;&#x5728;&#x8FD9;&#x53F0;&#x673A;&#x5668;&#x4E0A;&#xFF0C;&#x4F60;&#x4F01;&#x56FE;&#x53BB; ping192.168.1.6&#xFF0C;&#x4F60;&#x89C9;&#x5F97;&#x53EA;&#x8981;&#x5C06;&#x5305;&#x53D1;&#x51FA;&#x53BB;&#xFF0C;&#x540C;&#x4E00;&#x4E2A;&#x4EA4;&#x6362;&#x673A;&#x7684;&#x53E6;&#x4E00;&#x53F0;&#x673A;&#x5668;&#x9A6C;&#x4E0A;&#x5C31;&#x80FD;&#x6536;&#x5230;&#xFF0C;&#x5BF9;&#x4E0D;&#x5BF9;&#xFF1F;</p>
+<p>&#x53EF;&#x662F; Linux &#x7CFB;&#x7EDF;&#x4E0D;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF0C;&#x5B83;&#x6CA1;&#x4F60;&#x60F3;&#x5F97;&#x90A3;&#x4E48;&#x667A;&#x80FD;&#x3002;&#x4F60;&#x7528;&#x8089;&#x773C;&#x770B;&#x5230;&#x90A3;&#x53F0;&#x673A;&#x5668;&#x5C31;&#x5728;&#x65C1;&#x8FB9;&#xFF0C;&#x5B83;&#x5219;&#x9700;&#x8981;&#x6839;&#x636E;&#x81EA;&#x5DF1;&#x7684;&#x903B;&#x8F91;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x3002;</p>
+<p>&#x8FD8;&#x8BB0;&#x5F97;&#x6211;&#x4EEC;&#x5728;&#x7B2C;&#x4E8C;&#x8282;&#x8BF4;&#x8FC7;&#x7684;&#x539F;&#x5219;&#x5417;&#xFF1F;<strong>&#x53EA;&#x8981;&#x662F;&#x5728;&#x7F51;&#x7EDC;&#x4E0A;&#x8DD1;&#x7684;&#x5305;&#xFF0C;&#x90FD;&#x662F;&#x5B8C;&#x6574;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x6709;&#x4E0B;&#x5C42;&#x6CA1;&#x4E0A;&#x5C42;&#xFF0C;&#x7EDD;&#x5BF9;&#x4E0D;&#x53EF;&#x80FD;&#x6709;&#x4E0A;&#x5C42;&#x6CA1;&#x4E0B;&#x5C42;</strong>&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x4F60;&#x770B;&#x7740;&#x5B83;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x6E90; IP &#x5730;&#x5740; 16.158.23.6&#xFF0C;&#x4E5F;&#x6709;&#x76EE;&#x6807; IP &#x5730;&#x5740; 192.168.1.6&#xFF0C;&#x4F46;&#x662F;&#x5305;&#x53D1;&#x4E0D;&#x51FA;&#x53BB;&#xFF0C;&#x8FD9;&#x662F;&#x56E0;&#x4E3A; MAC &#x5C42;&#x8FD8;&#x6CA1;&#x586B;&#x3002;</p>
+<p>&#x81EA;&#x5DF1;&#x7684; MAC &#x5730;&#x5740;&#x81EA;&#x5DF1;&#x77E5;&#x9053;&#xFF0C;&#x8FD9;&#x4E2A;&#x5BB9;&#x6613;&#x3002;&#x4F46;&#x662F;&#x76EE;&#x6807; MAC &#x586B;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;&#x662F;&#x4E0D;&#x662F;&#x586B; 192.168.1.6 &#x8FD9;&#x53F0;&#x673A;&#x5668;&#x7684; MAC &#x5730;&#x5740;&#x5462;&#xFF1F;</p>
+<p>&#x5F53;&#x7136;&#x4E0D;&#x662F;&#x3002;Linux &#x9996;&#x5148;&#x4F1A;&#x5224;&#x65AD;&#xFF0C;&#x8981;&#x53BB;&#x7684;&#x8FD9;&#x4E2A;&#x5730;&#x5740;&#x548C;&#x6211;&#x662F;&#x4E00;&#x4E2A;&#x7F51;&#x6BB5;&#x7684;&#x5417;&#xFF0C;&#x6216;&#x8005;&#x548C;&#x6211;&#x7684;&#x4E00;&#x4E2A;&#x7F51;&#x5361;&#x662F;&#x540C;&#x4E00;&#x7F51;&#x6BB5;&#x7684;&#x5417;&#xFF1F;&#x53EA;&#x6709;&#x662F;&#x4E00;&#x4E2A;&#x7F51;&#x6BB5;&#x7684;&#xFF0C;&#x5B83;&#x624D;&#x4F1A;&#x53D1;&#x9001; ARP &#x8BF7;&#x6C42;&#xFF0C;&#x83B7;&#x53D6; MAC &#x5730;&#x5740;&#x3002;&#x5982;&#x679C;&#x53D1;&#x73B0;&#x4E0D;&#x662F;&#x5462;&#xFF1F;</p>
+<p><strong>Linux &#x9ED8;&#x8BA4;&#x7684;&#x903B;&#x8F91;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x8DE8;&#x7F51;&#x6BB5;&#x7684;&#x8C03;&#x7528;&#xFF0C;&#x5B83;&#x4FBF;&#x4E0D;&#x4F1A;&#x76F4;&#x63A5;&#x5C06;&#x5305;&#x53D1;&#x9001;&#x5230;&#x7F51;&#x7EDC;&#x4E0A;&#xFF0C;&#x800C;&#x662F;&#x4F01;&#x56FE;&#x5C06;&#x5305;&#x53D1;&#x9001;&#x5230;&#x7F51;&#x5173;</strong>&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x914D;&#x7F6E;&#x4E86;&#x7F51;&#x5173;&#x7684;&#x8BDD;&#xFF0C;Linux &#x4F1A;&#x83B7;&#x53D6;&#x7F51;&#x5173;&#x7684; MAC &#x5730;&#x5740;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x5305;&#x53D1;&#x51FA;&#x53BB;&#x3002;&#x5BF9;&#x4E8E; 192.168.1.6 &#x8FD9;&#x53F0;&#x673A;&#x5668;&#x6765;&#x8BB2;&#xFF0C;&#x867D;&#x7136;&#x8DEF;&#x8FC7;&#x5B83;&#x5BB6;&#x95E8;&#x7684;&#x8FD9;&#x4E2A;&#x5305;&#xFF0C;&#x76EE;&#x6807; IP &#x662F;&#x5B83;&#xFF0C;&#x4F46;&#x662F;&#x65E0;&#x5948; MAC &#x5730;&#x5740;&#x4E0D;&#x662F;&#x5B83;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x7684;&#x7F51;&#x5361;&#x662F;&#x4E0D;&#x4F1A;&#x628A;&#x5305;&#x6536;&#x8FDB;&#x53BB;&#x7684;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x914D;&#x7F6E;&#x7F51;&#x5173;&#x5462;&#xFF1F;&#x90A3;&#x5305;&#x538B;&#x6839;&#x5C31;&#x53D1;&#x4E0D;&#x51FA;&#x53BB;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x5C06;&#x7F51;&#x5173;&#x914D;&#x7F6E;&#x4E3A; 192.168.1.6 &#x5462;&#xFF1F;&#x4E0D;&#x53EF;&#x80FD;&#xFF0C;Linux &#x4E0D;&#x4F1A;&#x8BA9;&#x4F60;&#x914D;&#x7F6E;&#x6210;&#x529F;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x7F51;&#x5173;&#x8981;&#x548C;&#x5F53;&#x524D;&#x7684;&#x7F51;&#x7EDC;&#x81F3;&#x5C11;&#x4E00;&#x4E2A;&#x7F51;&#x5361;&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x7F51;&#x6BB5;&#x7684;&#xFF0C;&#x600E;&#x4E48;&#x53EF;&#x80FD; 16.158.23.6 &#x7684;&#x7F51;&#x5173;&#x662F; 192.168.1.6 &#x5462;&#xFF1F;</p>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x5F53;&#x4F60;&#x9700;&#x8981;&#x624B;&#x52A8;&#x914D;&#x7F6E;&#x4E00;&#x53F0;&#x673A;&#x5668;&#x7684;&#x7F51;&#x7EDC; IP &#x65F6;&#xFF0C;&#x4E00;&#x5B9A;&#x8981;&#x597D;&#x597D;&#x95EE;&#x95EE;&#x4F60;&#x7684;&#x7F51;&#x7EDC;&#x7BA1;&#x7406;&#x5458;&#x3002;&#x5982;&#x679C;&#x5728;&#x673A;&#x623F;&#x91CC;&#x9762;&#xFF0C;&#x8981;&#x53BB;&#x7F51;&#x7EDC;&#x7BA1;&#x7406;&#x5458;&#x90A3;&#x91CC;&#x7533;&#x8BF7;&#xFF0C;&#x8BA9;&#x4ED6;&#x7ED9;&#x4F60;&#x5206;&#x914D;&#x4E00;&#x6BB5;&#x6B63;&#x786E;&#x7684; IP &#x5730;&#x5740;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x771F;&#x6B63;&#x914D;&#x7F6E;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E00;&#x5B9A;&#x4E0D;&#x662F;&#x76F4;&#x63A5;&#x7528;&#x547D;&#x4EE4;&#x914D;&#x7F6E;&#x7684;&#xFF0C;&#x800C;&#x662F;&#x653E;&#x5728;&#x4E00;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x91CC;&#x9762;&#x3002;<strong>&#x4E0D;&#x540C;&#x7CFB;&#x7EDF;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x4E0D;&#x540C;&#xFF0C;&#x4F46;&#x662F;&#x65E0;&#x975E;&#x5C31;&#x662F; CIDR&#x3001;&#x5B50;&#x7F51;&#x63A9;&#x7801;&#x3001;&#x5E7F;&#x64AD;&#x5730;&#x5740;&#x548C;&#x7F51;&#x5173;&#x5730;&#x5740;</strong>&#x3002;</p>
+<h2 id="&#x52A8;&#x6001;&#x4E3B;&#x673A;&#x914D;&#x7F6E;&#x534F;&#x8BAE;&#xFF08;dhcp&#xFF09;"><a name="&#x52A8;&#x6001;&#x4E3B;&#x673A;&#x914D;&#x7F6E;&#x534F;&#x8BAE;&#xFF08;dhcp&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x52A8;&#x6001;&#x4E3B;&#x673A;&#x914D;&#x7F6E;&#x534F;&#x8BAE;&#xFF08;dhcp&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x52A8;&#x6001;&#x4E3B;&#x673A;&#x914D;&#x7F6E;&#x534F;&#x8BAE;&#xFF08;DHCP&#xFF09;</h2>
+<p>&#x539F;&#x6765;&#x914D;&#x7F6E; IP &#x6709;&#x8FD9;&#x4E48;&#x591A;&#x95E8;&#x9053;&#x513F;&#x554A;&#x3002;&#x4F60;&#x53EF;&#x80FD;&#x4F1A;&#x95EE;&#x4E86;&#xFF0C;&#x914D;&#x7F6E;&#x4E86; IP &#x4E4B;&#x540E;&#x4E00;&#x822C;&#x4E0D;&#x80FD;&#x53D8;&#x7684;&#xFF0C;&#x914D;&#x7F6E;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x7AEF;&#x7684;&#x673A;&#x5668;&#x8FD8;&#x53EF;&#x4EE5;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x662F;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x673A;&#x5668;&#x5462;&#xFF1F;&#x6211;&#x62B1;&#x7740;&#x4E00;&#x53F0;&#x7B14;&#x8BB0;&#x672C;&#x7535;&#x8111;&#x5728;&#x516C;&#x53F8;&#x91CC;&#x8D70;&#x6765;&#x8D70;&#x53BB;&#xFF0C;&#x6216;&#x8005;&#x767D;&#x5929;&#x6765;&#x665A;&#x4E0A;&#x8D70;&#xFF0C;&#x6BCF;&#x6B21;&#x4F7F;&#x7528;&#x90FD;&#x8981;&#x914D;&#x7F6E; IP &#x5730;&#x5740;&#xFF0C;&#x90A3;&#x53EF;&#x600E;&#x4E48;&#x529E;&#xFF1F;&#x8FD8;&#x6709;&#x4EBA;&#x4E8B;&#x3001;&#x884C;&#x653F;&#x7B49;&#x975E;&#x6280;&#x672F;&#x4EBA;&#x5458;&#xFF0C;&#x5982;&#x679C;&#x516C;&#x53F8;&#x6240;&#x6709;&#x7684;&#x7535;&#x8111;&#x90FD;&#x9700;&#x8981; IT &#x4EBA;&#x5458;&#x914D;&#x7F6E;&#xFF0C;&#x80AF;&#x5B9A;&#x5FD9;&#x4E0D;&#x8FC7;&#x6765;&#x554A;&#x3002;</p>
+<p>&#x56E0;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x6709;&#x4E00;&#x4E2A;&#x81EA;&#x52A8;&#x914D;&#x7F6E;&#x7684;&#x534F;&#x8BAE;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x79F0;<strong>&#x52A8;&#x6001;&#x4E3B;&#x673A;&#x914D;&#x7F6E;&#x534F;&#x8BAE;&#xFF08;Dynamic Host Configuration Protocol&#xFF09;</strong>&#xFF0C;&#x7B80;&#x79F0; <strong>DHCP</strong>&#x3002;</p>
+<p>&#x6709;&#x4E86;&#x8FD9;&#x4E2A;&#x534F;&#x8BAE;&#xFF0C;&#x7F51;&#x7EDC;&#x7BA1;&#x7406;&#x5458;&#x5C31;&#x8F7B;&#x677E;&#x591A;&#x4E86;&#x3002;&#x4ED6;&#x53EA;&#x9700;&#x8981;&#x914D;&#x7F6E;&#x4E00;&#x6BB5;&#x5171;&#x4EAB;&#x7684; IP &#x5730;&#x5740;&#x3002;&#x6BCF;&#x4E00;&#x53F0;&#x65B0;&#x63A5;&#x5165;&#x7684;&#x673A;&#x5668;&#x90FD;&#x901A;&#x8FC7; DHCP &#x534F;&#x8BAE;&#xFF0C;&#x6765;&#x8FD9;&#x4E2A;&#x5171;&#x4EAB;&#x7684; IP &#x5730;&#x5740;&#x91CC;&#x7533;&#x8BF7;&#xFF0C;&#x7136;&#x540E;&#x81EA;&#x52A8;&#x914D;&#x7F6E;&#x597D;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;&#x7B49;&#x4EBA;&#x8D70;&#x4E86;&#xFF0C;&#x6216;&#x8005;&#x7528;&#x5B8C;&#x4E86;&#xFF0C;&#x8FD8;&#x56DE;&#x53BB;&#xFF0C;&#x8FD9;&#x6837;&#x5176;&#x4ED6;&#x7684;&#x673A;&#x5668;&#x4E5F;&#x80FD;&#x7528;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x8BF4;&#xFF0C;<strong>&#x5982;&#x679C;&#x662F;&#x6570;&#x636E;&#x4E2D;&#x5FC3;&#x91CC;&#x9762;&#x7684;&#x670D;&#x52A1;&#x5668;&#xFF0C;IP &#x4E00;&#x65E6;&#x914D;&#x7F6E;&#x597D;&#xFF0C;&#x57FA;&#x672C;&#x4E0D;&#x4F1A;&#x53D8;&#xFF0C;&#x8FD9;&#x5C31;&#x76F8;&#x5F53;&#x4E8E;&#x4E70;&#x623F;&#x81EA;&#x5DF1;&#x88C5;&#x4FEE;&#x3002;DHCP &#x7684;&#x65B9;&#x5F0F;&#x5C31;&#x76F8;&#x5F53;&#x4E8E;&#x79DF;&#x623F;&#x3002;&#x4F60;&#x4E0D;&#x7528;&#x88C5;&#x4FEE;&#xFF0C;&#x90FD;&#x662F;&#x5E2E;&#x4F60;&#x914D;&#x7F6E;&#x597D;&#x7684;&#x3002;&#x4F60;&#x6682;&#x65F6;&#x7528;&#x4E00;&#x4E0B;&#xFF0C;&#x7528;&#x5B8C;&#x9000;&#x79DF;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;</strong>&#x3002;</p>
+<h2 id="&#x89E3;&#x6790;-dhcp-&#x7684;&#x5DE5;&#x4F5C;&#x65B9;&#x5F0F;"><a name="&#x89E3;&#x6790;-dhcp-&#x7684;&#x5DE5;&#x4F5C;&#x65B9;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x6790;-dhcp-&#x7684;&#x5DE5;&#x4F5C;&#x65B9;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E3;&#x6790; DHCP &#x7684;&#x5DE5;&#x4F5C;&#x65B9;&#x5F0F;</h2>
+<p>&#x5F53;&#x4E00;&#x53F0;&#x673A;&#x5668;&#x65B0;&#x52A0;&#x5165;&#x4E00;&#x4E2A;&#x7F51;&#x7EDC;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x80AF;&#x5B9A;&#x4E00;&#x8138;&#x61F5;&#xFF0C;&#x5565;&#x60C5;&#x51B5;&#x90FD;&#x4E0D;&#x77E5;&#x9053;&#xFF0C;&#x53EA;&#x77E5;&#x9053;&#x81EA;&#x5DF1;&#x7684; MAC &#x5730;&#x5740;&#x3002;&#x600E;&#x4E48;&#x529E;&#xFF1F;&#x5148;&#x543C;&#x4E00;&#x53E5;&#xFF0C;&#x6211;&#x6765;&#x5566;&#xFF0C;&#x6709;&#x4EBA;&#x5417;&#xFF1F;&#x8FD9;&#x65F6;&#x5019;&#x7684;&#x6C9F;&#x901A;&#x57FA;&#x672C;&#x9760;&#x201C;&#x543C;&#x201D;&#x3002;&#x8FD9;&#x4E00;&#x6B65;&#xFF0C;&#x6211;&#x4EEC;&#x79F0;&#x4E3A; <strong>DHCP Discover</strong>&#x3002;</p>
+<p>&#x65B0;&#x6765;&#x7684;&#x673A;&#x5668;&#x4F7F;&#x7528; IP &#x5730;&#x5740; 0.0.0.0 &#x53D1;&#x9001;&#x4E86;&#x4E00;&#x4E2A;&#x5E7F;&#x64AD;&#x5305;&#xFF0C;&#x76EE;&#x7684; IP &#x5730;&#x5740;&#x4E3A; 255.255.255.255&#x3002;&#x5E7F;&#x64AD;&#x5305;&#x5C01;&#x88C5;&#x4E86; UDP&#xFF0C;UDP &#x5C01;&#x88C5;&#x4E86; BOOTP&#x3002;&#x5176;&#x5B9E; DHCP &#x662F; BOOTP &#x7684;&#x589E;&#x5F3A;&#x7248;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x4F60;&#x53BB;&#x6293;&#x5305;&#x7684;&#x8BDD;&#xFF0C;&#x5F88;&#x53EF;&#x80FD;&#x770B;&#x5230;&#x7684;&#x540D;&#x79F0;&#x8FD8;&#x662F; BOOTP &#x534F;&#x8BAE;&#x3002;</p>
+<p>&#x5728;&#x8FD9;&#x4E2A;&#x5E7F;&#x64AD;&#x5305;&#x91CC;&#x9762;&#xFF0C;&#x65B0;&#x4EBA;&#x5927;&#x58F0;&#x558A;&#xFF1A;&#x6211;&#x662F;&#x65B0;&#x6765;&#x7684;&#xFF08;Boot request&#xFF09;&#xFF0C;&#x6211;&#x7684; MAC &#x5730;&#x5740;&#x662F;&#x8FD9;&#x4E2A;&#xFF0C;&#x6211;&#x8FD8;&#x6CA1;&#x6709; IP&#xFF0C;&#x8C01;&#x80FD;&#x7ED9;&#x79DF;&#x7ED9;&#x6211;&#x4E2A; IP &#x5730;&#x5740;&#xFF01;</p>
+<p>&#x683C;&#x5F0F;&#x5C31;&#x50CF;&#x8FD9;&#x6837;&#xFF1A;</p>
+<div align="center">
+ <a href="http://photo.hugethanks.cn/protocol-4.1.jpg" data-lightbox="fbb0628f-9462-47c2-a3ae-0614903e3d2d" data-title="undefined" target="_blank"><img src="http://photo.hugethanks.cn/protocol-4.1.jpg" alt="undefined"></a>
+</div>
+
+<p>&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x7F51;&#x7EDC;&#x7BA1;&#x7406;&#x5458;&#x5728;&#x7F51;&#x7EDC;&#x91CC;&#x9762;&#x914D;&#x7F6E;&#x4E86; <strong>DHCP Server</strong> &#x7684;&#x8BDD;&#xFF0C;&#x4ED6;&#x5C31;&#x76F8;&#x5F53;&#x4E8E;&#x8FD9;&#x4E9B; IP &#x7684;&#x7BA1;&#x7406;&#x5458;&#x3002;&#x4ED6;&#x7ACB;&#x523B;&#x80FD;&#x77E5;&#x9053;&#x6765;&#x4E86;&#x4E00;&#x4E2A;&#x201C;&#x65B0;&#x4EBA;&#x201D;&#x3002;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F53;&#x4F1A; MAC &#x5730;&#x5740;&#x552F;&#x4E00;&#x7684;&#x91CD;&#x8981;&#x6027;&#x4E86;&#x3002;&#x5F53;&#x4E00;&#x53F0;&#x673A;&#x5668;&#x5E26;&#x7740;&#x81EA;&#x5DF1;&#x7684; MAC &#x5730;&#x5740;&#x52A0;&#x5165;&#x4E00;&#x4E2A;&#x7F51;&#x7EDC;&#x7684;&#x65F6;&#x5019;&#xFF0C;MAC &#x662F;&#x5B83;&#x552F;&#x4E00;&#x7684;&#x8EAB;&#x4EFD;&#xFF0C;&#x5982;&#x679C;&#x8FDE;&#x8FD9;&#x4E2A;&#x90FD;&#x91CD;&#x590D;&#x4E86;&#xFF0C;&#x5C31;&#x6CA1;&#x529E;&#x6CD5;&#x914D;&#x7F6E;&#x4E86;&#x3002;</p>
+<p>&#x53EA;&#x6709; MAC &#x552F;&#x4E00;&#xFF0C;IP &#x7BA1;&#x7406;&#x5458;&#x624D;&#x80FD;&#x77E5;&#x9053;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x65B0;&#x4EBA;&#xFF0C;&#x9700;&#x8981;&#x79DF;&#x7ED9;&#x5B83;&#x4E00;&#x4E2A; IP &#x5730;&#x5740;&#xFF0C;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x6211;&#x4EEC;&#x79F0;&#x4E3A; <strong>DHCP Offer</strong>&#x3002;&#x540C;&#x65F6;&#xFF0C;DHCP Server &#x4E3A;&#x6B64;&#x5BA2;&#x6237;&#x4FDD;&#x7559;&#x4E3A;&#x5B83;&#x63D0;&#x4F9B;&#x7684; IP &#x5730;&#x5740;&#xFF0C;&#x4ECE;&#x800C;&#x4E0D;&#x4F1A;&#x4E3A;&#x5176;&#x4ED6; DHCP &#x5BA2;&#x6237;&#x5206;&#x914D;&#x6B64; IP &#x5730;&#x5740;&#x3002;</p>
+<p>DHCP Offer &#x7684;&#x683C;&#x5F0F;&#x5C31;&#x50CF;&#x8FD9;&#x6837;&#xFF0C;&#x91CC;&#x9762;&#x6709;&#x7ED9;&#x65B0;&#x4EBA;&#x5206;&#x914D;&#x7684;&#x5730;&#x5740;&#x3002;</p>
+<div align="center">
+ <a href="http://photo.hugethanks.cn/protocol-4.2.jpg" data-lightbox="a238e2b2-fe73-47a2-acfe-a7577e7782af" data-title="undefined" target="_blank"><img src="http://photo.hugethanks.cn/protocol-4.2.jpg" alt="undefined"></a>
+</div>
+
+<p>DHCP Server &#x4ECD;&#x7136;&#x4F7F;&#x7528;&#x5E7F;&#x64AD;&#x5730;&#x5740;&#x4F5C;&#x4E3A;&#x76EE;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x56E0;&#x4E3A;&#xFF0C;&#x6B64;&#x65F6;&#x8BF7;&#x6C42;&#x5206;&#x914D; IP &#x7684;&#x65B0;&#x4EBA;&#x8FD8;&#x6CA1;&#x6709;&#x81EA;&#x5DF1;&#x7684; IP&#x3002;DHCP Server &#x56DE;&#x590D;&#x8BF4;&#xFF0C;&#x6211;&#x5206;&#x914D;&#x4E86;&#x4E00;&#x4E2A;&#x53EF;&#x7528;&#x7684; IP &#x7ED9;&#x4F60;&#xFF0C;&#x4F60;&#x770B;&#x5982;&#x4F55;&#xFF1F;&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x8FD8;&#x53D1;&#x9001;&#x4E86;&#x5B50;&#x7F51;&#x63A9;&#x7801;&#x3001;&#x7F51;&#x5173;&#x548C; IP &#x5730;&#x5740;&#x79DF;&#x7528;&#x671F;&#x7B49;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x65B0;&#x6765;&#x7684;&#x673A;&#x5668;&#x5F88;&#x5F00;&#x5FC3;&#xFF0C;&#x5B83;&#x7684;&#x201C;&#x543C;&#x201D;&#x5F97;&#x5230;&#x4E86;&#x56DE;&#x590D;&#xFF0C;&#x5E76;&#x4E14;&#x6709;&#x4EBA;&#x613F;&#x610F;&#x79DF;&#x7ED9;&#x5B83;&#x4E00;&#x4E2A; IP &#x5730;&#x5740;&#x4E86;&#xFF0C;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x5B83;&#x53EF;&#x4EE5;&#x5728;&#x7F51;&#x7EDC;&#x4E0A;&#x7ACB;&#x8DB3;&#x4E86;&#x3002;&#x5F53;&#x7136;&#x66F4;&#x4EE4;&#x4EBA;&#x5F00;&#x5FC3;&#x7684;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x591A;&#x4E2A; DHCP Server&#xFF0C;&#x8FD9;&#x53F0;&#x65B0;&#x673A;&#x5668;&#x4F1A;&#x6536;&#x5230;&#x591A;&#x4E2A; IP &#x5730;&#x5740;&#xFF0C;&#x7B80;&#x76F4;&#x53D7;&#x5BA0;&#x82E5;&#x60CA;&#x3002;</p>
+<p>&#x5B83;&#x4F1A;&#x9009;&#x62E9;&#x5176;&#x4E2D;&#x4E00;&#x4E2A; DHCP Offer&#xFF0C;&#x4E00;&#x822C;&#x662F;&#x6700;&#x5148;&#x5230;&#x8FBE;&#x7684;&#x90A3;&#x4E2A;&#xFF0C;&#x5E76;&#x4E14;&#x4F1A;&#x5411;&#x7F51;&#x7EDC;&#x53D1;&#x9001;&#x4E00;&#x4E2A; DHCP Request &#x5E7F;&#x64AD;&#x6570;&#x636E;&#x5305;&#xFF0C;&#x5305;&#x4E2D;&#x5305;&#x542B;&#x5BA2;&#x6237;&#x7AEF;&#x7684; MAC &#x5730;&#x5740;&#x3001;&#x63A5;&#x53D7;&#x7684;&#x79DF;&#x7EA6;&#x4E2D;&#x7684; IP &#x5730;&#x5740;&#x3001;&#x63D0;&#x4F9B;&#x6B64;&#x79DF;&#x7EA6;&#x7684; DHCP &#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;&#x7B49;&#xFF0C;&#x5E76;&#x544A;&#x8BC9;&#x6240;&#x6709; DHCP Server &#x5B83;&#x5C06;&#x63A5;&#x53D7;&#x54EA;&#x4E00;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x63D0;&#x4F9B;&#x7684; IP &#x5730;&#x5740;&#xFF0C;&#x544A;&#x8BC9;&#x5176;&#x4ED6; DHCP &#x670D;&#x52A1;&#x5668;&#xFF0C;&#x8C22;&#x8C22;&#x4F60;&#x4EEC;&#x7684;&#x63A5;&#x7EB3;&#xFF0C;&#x5E76;&#x8BF7;&#x6C42;&#x64A4;&#x9500;&#x5B83;&#x4EEC;&#x63D0;&#x4F9B;&#x7684; IP &#x5730;&#x5740;&#xFF0C;&#x4EE5;&#x4FBF;&#x63D0;&#x4F9B;&#x7ED9;&#x4E0B;&#x4E00;&#x4E2A; IP &#x79DF;&#x7528;&#x8BF7;&#x6C42;&#x8005;&#x3002;</p>
+<div align="center">
+ <a href="http://photo.hugethanks.cn/protocol-4.3.jpg" data-lightbox="4e51f6a9-5f74-41d4-9e6f-19f5357f61e1" data-title="undefined" target="_blank"><img src="http://photo.hugethanks.cn/protocol-4.3.jpg" alt="undefined"></a>
+</div>
+
+<p>&#x6B64;&#x65F6;&#xFF0C;&#x7531;&#x4E8E;&#x8FD8;&#x6CA1;&#x6709;&#x5F97;&#x5230; DHCP Server &#x7684;&#x6700;&#x540E;&#x786E;&#x8BA4;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x4ECD;&#x7136;&#x4F7F;&#x7528; 0.0.0.0 &#x4E3A;&#x6E90; IP &#x5730;&#x5740;&#x3001;255.255.255.255 &#x4E3A;&#x76EE;&#x6807;&#x5730;&#x5740;&#x8FDB;&#x884C;&#x5E7F;&#x64AD;&#x3002;&#x5728; BOOTP &#x91CC;&#x9762;&#xFF0C;&#x63A5;&#x53D7;&#x67D0;&#x4E2A; DHCP Server &#x7684;&#x5206;&#x914D;&#x7684; IP&#x3002;</p>
+<p>&#x5F53; DHCP Server &#x63A5;&#x6536;&#x5230;&#x5BA2;&#x6237;&#x673A;&#x7684; DHCP request &#x4E4B;&#x540E;&#xFF0C;&#x4F1A;&#x5E7F;&#x64AD;&#x8FD4;&#x56DE;&#x7ED9;&#x5BA2;&#x6237;&#x673A;&#x4E00;&#x4E2A; DHCP ACK &#x6D88;&#x606F;&#x5305;&#xFF0C;&#x8868;&#x660E;&#x5DF2;&#x7ECF;&#x63A5;&#x53D7;&#x5BA2;&#x6237;&#x673A;&#x7684;&#x9009;&#x62E9;&#xFF0C;&#x5E76;&#x5C06;&#x8FD9;&#x4E00; IP &#x5730;&#x5740;&#x7684;&#x5408;&#x6CD5;&#x79DF;&#x7528;&#x4FE1;&#x606F;&#x548C;&#x5176;&#x4ED6;&#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x90FD;&#x653E;&#x5165;&#x8BE5;&#x5E7F;&#x64AD;&#x5305;&#xFF0C;&#x53D1;&#x7ED9;&#x5BA2;&#x6237;&#x673A;&#xFF0C;&#x6B22;&#x8FCE;&#x5B83;&#x52A0;&#x5165;&#x7F51;&#x7EDC;&#x5927;&#x5BB6;&#x5EAD;&#x3002;</p>
+<div align="center">
+ <a href="http://photo.hugethanks.cn/protocol-4.4.jpg" data-lightbox="9b275ddd-df0c-4980-8ecc-24c1726c0ff3" data-title="undefined" target="_blank"><img src="http://photo.hugethanks.cn/protocol-4.4.jpg" alt="undefined"></a>
+</div>
+
+<p>&#x6700;&#x7EC8;&#x79DF;&#x7EA6;&#x8FBE;&#x6210;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8FD8;&#x662F;&#x9700;&#x8981;&#x5E7F;&#x64AD;&#x4E00;&#x4E0B;&#xFF0C;&#x8BA9;&#x5927;&#x5BB6;&#x90FD;&#x77E5;&#x9053;&#x3002;</p>
+<h2 id="ip-&#x5730;&#x5740;&#x7684;&#x6536;&#x56DE;&#x548C;&#x7EED;&#x79DF;"><a name="ip-&#x5730;&#x5740;&#x7684;&#x6536;&#x56DE;&#x548C;&#x7EED;&#x79DF;" class="anchor-navigation-ex-anchor" href="#ip-&#x5730;&#x5740;&#x7684;&#x6536;&#x56DE;&#x548C;&#x7EED;&#x79DF;"><i class="fa fa-link" aria-hidden="true"></i></a>IP &#x5730;&#x5740;&#x7684;&#x6536;&#x56DE;&#x548C;&#x7EED;&#x79DF;</h2>
+<p>&#x65E2;&#x7136;&#x662F;&#x79DF;&#x623F;&#x5B50;&#xFF0C;&#x5C31;&#x662F;&#x6709;&#x79DF;&#x671F;&#x7684;&#x3002;&#x79DF;&#x671F;&#x5230;&#x4E86;&#xFF0C;&#x7BA1;&#x7406;&#x5458;&#x5C31;&#x8981;&#x5C06; IP &#x6536;&#x56DE;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4E0D;&#x7528;&#x7684;&#x8BDD;&#xFF0C;&#x6536;&#x56DE;&#x5C31;&#x6536;&#x56DE;&#x4E86;&#x3002;&#x5C31;&#x50CF;&#x4F60;&#x79DF;&#x623F;&#x5B50;&#x4E00;&#x6837;&#xFF0C;&#x5982;&#x679C;&#x8FD8;&#x8981;&#x7EED;&#x79DF;&#x7684;&#x8BDD;&#xFF0C;&#x4E0D;&#x80FD;&#x5230;&#x4E86;&#x65F6;&#x95F4;&#x518D;&#x7EED;&#x79DF;&#xFF0C;&#x800C;&#x662F;&#x8981;&#x63D0;&#x524D;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x7ED9;&#x623F;&#x4E1C;&#x8BF4;&#x3002;DHCP &#x4E5F;&#x662F;&#x8FD9;&#x6837;&#x3002;</p>
+<p>&#x5BA2;&#x6237;&#x673A;&#x4F1A;&#x5728;&#x79DF;&#x671F;&#x8FC7;&#x53BB; 50% &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x76F4;&#x63A5;&#x5411;&#x4E3A;&#x5176;&#x63D0;&#x4F9B; IP &#x5730;&#x5740;&#x7684; DHCP Server &#x53D1;&#x9001; DHCP request &#x6D88;&#x606F;&#x5305;&#x3002;&#x5BA2;&#x6237;&#x673A;&#x63A5;&#x6536;&#x5230;&#x8BE5;&#x670D;&#x52A1;&#x5668;&#x56DE;&#x5E94;&#x7684; DHCP ACK &#x6D88;&#x606F;&#x5305;&#xFF0C;&#x4F1A;&#x6839;&#x636E;&#x5305;&#x4E2D;&#x6240;&#x63D0;&#x4F9B;&#x7684;&#x65B0;&#x7684;&#x79DF;&#x671F;&#x4EE5;&#x53CA;&#x5176;&#x4ED6;&#x5DF2;&#x7ECF;&#x66F4;&#x65B0;&#x7684; TCP/IP &#x53C2;&#x6570;&#xFF0C;&#x66F4;&#x65B0;&#x81EA;&#x5DF1;&#x7684;&#x914D;&#x7F6E;&#x3002;&#x8FD9;&#x6837;&#xFF0C;IP &#x79DF;&#x7528;&#x66F4;&#x65B0;&#x5C31;&#x5B8C;&#x6210;&#x4E86;&#x3002;</p>
+<p>&#x597D;&#x4E86;&#xFF0C;&#x4E00;&#x5207;&#x770B;&#x8D77;&#x6765;&#x5B8C;&#x7F8E;&#x3002;DHCP &#x534F;&#x8BAE;&#x5927;&#x90E8;&#x5206;&#x4EBA;&#x90FD;&#x77E5;&#x9053;&#xFF0C;&#x4F46;&#x662F;&#x5176;&#x5B9E;&#x91CC;&#x9762;&#x9690;&#x85CF;&#x7740;&#x4E00;&#x4E2A;&#x7EC6;&#x8282;&#xFF0C;&#x5F88;&#x591A;&#x4EBA;&#x53EF;&#x80FD;&#x4E0D;&#x4F1A;&#x53BB;&#x6CE8;&#x610F;&#x3002;&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x6211;&#x5C31;&#x8BB2;&#x4E00;&#x4E2A;&#x6709;&#x610F;&#x601D;&#x7684;&#x4E8B;&#x60C5;&#xFF1A;&#x7F51;&#x7EDC;&#x7BA1;&#x7406;&#x5458;&#x4E0D;&#x4EC5;&#x80FD;&#x81EA;&#x52A8;&#x5206;&#x914D; IP &#x5730;&#x5740;&#xFF0C;&#x8FD8;&#x80FD;&#x5E2E;&#x4F60;&#x81EA;&#x52A8;&#x5B89;&#x88C5;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#xFF01;</p>
+<h2 id="&#x9884;&#x542F;&#x52A8;&#x6267;&#x884C;&#x73AF;&#x5883;&#xFF08;pxe&#xFF09;"><a name="&#x9884;&#x542F;&#x52A8;&#x6267;&#x884C;&#x73AF;&#x5883;&#xFF08;pxe&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x9884;&#x542F;&#x52A8;&#x6267;&#x884C;&#x73AF;&#x5883;&#xFF08;pxe&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9884;&#x542F;&#x52A8;&#x6267;&#x884C;&#x73AF;&#x5883;&#xFF08;PXE&#xFF09;</h2>
+<p>&#x666E;&#x901A;&#x7684;&#x7B14;&#x8BB0;&#x672C;&#x7535;&#x8111;&#xFF0C;&#x4E00;&#x822C;&#x4E0D;&#x4F1A;&#x6709;&#x8FD9;&#x79CD;&#x9700;&#x6C42;&#x3002;&#x56E0;&#x4E3A;&#x4F60;&#x62FF;&#x5230;&#x7535;&#x8111;&#x65F6;&#xFF0C;&#x5C31;&#x5DF2;&#x7ECF;&#x6709;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E86;&#xFF0C;&#x5373;&#x4FBF;&#x4F60;&#x81EA;&#x5DF1;&#x91CD;&#x88C5;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#xFF0C;&#x4E5F;&#x4E0D;&#x662F;&#x5F88;&#x9EBB;&#x70E6;&#x7684;&#x4E8B;&#x60C5;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5728;&#x6570;&#x636E;&#x4E2D;&#x5FC3;&#x91CC;&#x5C31;&#x4E0D;&#x4E00;&#x6837;&#x4E86;&#x3002;&#x6570;&#x636E;&#x4E2D;&#x5FC3;&#x91CC;&#x9762;&#x7684;&#x7BA1;&#x7406;&#x5458;&#x53EF;&#x80FD;&#x4E00;&#x4E0B;&#x5B50;&#x5C31;&#x62FF;&#x5230;&#x51E0;&#x767E;&#x53F0;&#x7A7A;&#x7684;&#x673A;&#x5668;&#xFF0C;&#x4E00;&#x4E2A;&#x4E2A;&#x5B89;&#x88C5;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#xFF0C;&#x4F1A;&#x7D2F;&#x6B7B;&#x7684;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x7BA1;&#x7406;&#x5458;&#x5E0C;&#x671B;&#x7684;&#x4E0D;&#x4EC5;&#x4EC5;&#x662F;&#x81EA;&#x52A8;&#x5206;&#x914D; IP &#x5730;&#x5740;&#xFF0C;&#x8FD8;&#x8981;&#x81EA;&#x52A8;&#x5B89;&#x88C5;&#x7CFB;&#x7EDF;&#x3002;&#x88C5;&#x597D;&#x7CFB;&#x7EDF;&#x4E4B;&#x540E;&#x81EA;&#x52A8;&#x5206;&#x914D; IP &#x5730;&#x5740;&#xFF0C;&#x76F4;&#x63A5;&#x542F;&#x52A8;&#x5C31;&#x80FD;&#x7528;&#x4E86;&#xFF0C;&#x8FD9;&#x6837;&#x5F53;&#x7136;&#x6700;&#x597D;&#x4E86;&#xFF01;</p>
+<p>&#x8FD9;&#x4E8B;&#x513F;&#x5176;&#x5B9E;&#x4ED4;&#x7EC6;&#x4E00;&#x60F3;&#xFF0C;&#x8FD8;&#x662F;&#x633A;&#x6709;&#x96BE;&#x5EA6;&#x7684;&#x3002;&#x5B89;&#x88C5;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#xFF0C;&#x5E94;&#x8BE5;&#x6709;&#x4E2A;&#x5149;&#x76D8;&#x5427;&#x3002;&#x6570;&#x636E;&#x4E2D;&#x5FC3;&#x91CC;&#x4E0D;&#x80FD;&#x7528;&#x5149;&#x76D8;&#x5427;&#xFF0C;&#x60F3;&#x4E86;&#x4E00;&#x4E2A;&#x529E;&#x6CD5;&#x5C31;&#x662F;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x5149;&#x76D8;&#x91CC;&#x9762;&#x8981;&#x5B89;&#x88C5;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x653E;&#x5728;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#xFF0C;&#x8BA9;&#x5BA2;&#x6237;&#x7AEF;&#x53BB;&#x4E0B;&#x8F7D;&#x3002;&#x4F46;&#x662F;&#x5BA2;&#x6237;&#x7AEF;&#x653E;&#x5728;&#x54EA;&#x91CC;&#x5462;&#xFF1F;&#x5B83;&#x600E;&#x4E48;&#x77E5;&#x9053;&#x53BB;&#x54EA;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x4E0B;&#x8F7D;&#x5462;&#xFF1F;&#x5BA2;&#x6237;&#x7AEF;&#x603B;&#x5F97;&#x5B89;&#x88C5;&#x5728;&#x4E00;&#x4E2A;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E0A;&#x5440;&#xFF0C;&#x53EF;&#x662F;&#x8FD9;&#x4E2A;&#x5BA2;&#x6237;&#x7AEF;&#x672C;&#x6765;&#x5C31;&#x662F;&#x7528;&#x6765;&#x5B89;&#x88C5;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x5440;&#xFF1F;</p>
+<p>&#x5176;&#x5B9E;&#xFF0C;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x548C;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x542F;&#x52A8;&#x7684;&#x8FC7;&#x7A0B;&#x6709;&#x70B9;&#x513F;&#x50CF;&#x3002;&#x9996;&#x5148;&#xFF0C;&#x542F;&#x52A8; BIOS&#x3002;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x7279;&#x522B;&#x5C0F;&#x7684;&#x5C0F;&#x7CFB;&#x7EDF;&#xFF0C;&#x53EA;&#x80FD;&#x5E72;&#x7279;&#x522B;&#x5C0F;&#x7684;&#x4E00;&#x4EF6;&#x4E8B;&#x60C5;&#x3002;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x8BFB;&#x53D6;&#x786C;&#x76D8;&#x7684; MBR &#x542F;&#x52A8;&#x6247;&#x533A;&#xFF0C;&#x5C06; GRUB &#x542F;&#x52A8;&#x8D77;&#x6765;&#xFF1B;&#x7136;&#x540E;&#x5C06;&#x6743;&#x529B;&#x4EA4;&#x7ED9; GRUB&#xFF0C;GRUB &#x52A0;&#x8F7D;&#x5185;&#x6838;&#x3001;&#x52A0;&#x8F7D;&#x4F5C;&#x4E3A;&#x6839;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684; initramfs &#x6587;&#x4EF6;&#xFF1B;&#x7136;&#x540E;&#x5C06;&#x6743;&#x529B;&#x4EA4;&#x7ED9;&#x5185;&#x6838;&#xFF1B;&#x6700;&#x540E;&#x5185;&#x6838;&#x542F;&#x52A8;&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x6574;&#x4E2A;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x3002;</p>
+<p>&#x90A3;&#x6211;&#x4EEC;&#x5B89;&#x88C5;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x53EA;&#x80FD;&#x63D2;&#x5728; BIOS &#x542F;&#x52A8;&#x4E4B;&#x540E;&#x4E86;&#x3002;&#x56E0;&#x4E3A;&#x6CA1;&#x5B89;&#x88C5;&#x7CFB;&#x7EDF;&#x4E4B;&#x524D;&#xFF0C;&#x8FDE;&#x542F;&#x52A8;&#x6247;&#x533A;&#x90FD;&#x6CA1;&#x6709;&#x3002;&#x56E0;&#x800C;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x53EB;&#x505A;<strong>&#x9884;&#x542F;&#x52A8;&#x6267;&#x884C;&#x73AF;&#x5883;&#xFF08;Pre-boot Execution Environment&#xFF09;</strong>&#xFF0C;&#x7B80;&#x79F0; <strong>PXE</strong>&#x3002;</p>
+<p>PXE &#x534F;&#x8BAE;&#x5206;&#x4E3A;&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#xFF0C;&#x7531;&#x4E8E;&#x8FD8;&#x6CA1;&#x6709;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#xFF0C;&#x53EA;&#x80FD;&#x5148;&#x628A;&#x5BA2;&#x6237;&#x7AEF;&#x653E;&#x5728; BIOS &#x91CC;&#x9762;&#x3002;&#x5F53;&#x8BA1;&#x7B97;&#x673A;&#x542F;&#x52A8;&#x65F6;&#xFF0C;BIOS &#x628A; PXE &#x5BA2;&#x6237;&#x7AEF;&#x8C03;&#x5165;&#x5185;&#x5B58;&#x91CC;&#x9762;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x8FDE;&#x63A5;&#x5230;&#x670D;&#x52A1;&#x7AEF;&#x505A;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;&#x4E86;&#x3002;</p>
+<p>&#x9996;&#x5148;&#xFF0C;PXE &#x5BA2;&#x6237;&#x7AEF;&#x81EA;&#x5DF1;&#x4E5F;&#x9700;&#x8981;&#x6709;&#x4E2A; IP &#x5730;&#x5740;&#x3002;&#x56E0;&#x4E3A; PXE &#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x542F;&#x52A8;&#x8D77;&#x6765;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x53D1;&#x9001;&#x4E00;&#x4E2A; DHCP &#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x8BA9; DHCP Server &#x7ED9;&#x5B83;&#x5206;&#x914D;&#x4E00;&#x4E2A;&#x5730;&#x5740;&#x3002;PXE &#x5BA2;&#x6237;&#x7AEF;&#x6709;&#x4E86;&#x81EA;&#x5DF1;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x90A3;&#x5B83;&#x600E;&#x4E48;&#x77E5;&#x9053; PXE &#x670D;&#x52A1;&#x5668;&#x5728;&#x54EA;&#x91CC;&#x5462;&#xFF1F;&#x5BF9;&#x4E8E;&#x5176;&#x4ED6;&#x7684;&#x534F;&#x8BAE;&#xFF0C;&#x90FD;&#x597D;&#x529E;&#xFF0C;&#x8981;&#x4E48;&#x4EBA;&#x544A;&#x8BC9;&#x4ED6;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x544A;&#x8BC9;&#x6D4F;&#x89C8;&#x5668;&#x8981;&#x8BBF;&#x95EE;&#x7684; IP &#x5730;&#x5740;&#xFF0C;&#x6216;&#x8005;&#x5728;&#x914D;&#x7F6E;&#x4E2D;&#x544A;&#x8BC9;&#x5B83;&#xFF1B;&#x4F8B;&#x5982;&#xFF0C;&#x5FAE;&#x670D;&#x52A1;&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x4E92;&#x8C03;&#x7528;&#x3002;</p>
+<p>&#x4F46;&#x662F; PXE &#x5BA2;&#x6237;&#x7AEF;&#x542F;&#x52A8;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5565;&#x90FD;&#x6CA1;&#x6709;&#x3002;&#x597D;&#x5728; DHCP Server &#x9664;&#x4E86;&#x5206;&#x914D; IP &#x5730;&#x5740;&#x4EE5;&#x5916;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x505A;&#x4E00;&#x4E9B;&#x5176;&#x4ED6;&#x7684;&#x4E8B;&#x60C5;&#x3002;&#x8FD9;&#x91CC;&#x6709;&#x4E00;&#x4E2A; DHCP Server &#x7684;&#x4E00;&#x4E2A;&#x6837;&#x4F8B;&#x914D;&#x7F6E;&#xFF1A;</p>
+<pre class="language-"><code>ddns-update-style interim;
+ignore client-updates;
+allow booting;
+allow bootp;
+subnet 192.168.1.0 netmask 255.255.255.0
+{
+option routers 192.168.1.1;
+option subnet-mask 255.255.255.0;
+option time-offset -18000;
+default-lease-time 21600;
+max-lease-time 43200;
+range dynamic-bootp 192.168.1.240 192.168.1.250;
+filename &quot;pxelinux.0&quot;;
+next-server 192.168.1.180;
+}
+</code></pre><p>&#x6309;&#x7167;&#x4E0A;&#x9762;&#x7684;&#x539F;&#x7406;&#xFF0C;&#x9ED8;&#x8BA4;&#x7684; DHCP Server &#x662F;&#x9700;&#x8981;&#x914D;&#x7F6E;&#x7684;&#xFF0C;&#x65E0;&#x975E;&#x662F;&#x6211;&#x4EEC;&#x914D;&#x7F6E; IP &#x7684;&#x65F6;&#x5019;&#x6240;&#x9700;&#x8981;&#x7684; IP &#x5730;&#x5740;&#x6BB5;&#x3001;&#x5B50;&#x7F51;&#x63A9;&#x7801;&#x3001;&#x7F51;&#x5173;&#x5730;&#x5740;&#x3001;&#x79DF;&#x671F;&#x7B49;&#x3002;&#x5982;&#x679C;&#x60F3;&#x4F7F;&#x7528; PXE&#xFF0C;&#x5219;&#x9700;&#x8981;&#x914D;&#x7F6E; next-server&#xFF0C;&#x6307;&#x5411; PXE &#x670D;&#x52A1;&#x5668;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x53E6;&#x5916;&#x8981;&#x914D;&#x7F6E;&#x521D;&#x59CB;&#x542F;&#x52A8;&#x6587;&#x4EF6; filename&#x3002;</p>
+<p>&#x8FD9;&#x6837; PXE &#x5BA2;&#x6237;&#x7AEF;&#x542F;&#x52A8;&#x4E4B;&#x540E;&#xFF0C;&#x53D1;&#x9001; DHCP &#x8BF7;&#x6C42;&#x4E4B;&#x540E;&#xFF0C;&#x9664;&#x4E86;&#x80FD;&#x5F97;&#x5230;&#x4E00;&#x4E2A; IP &#x5730;&#x5740;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x77E5;&#x9053; PXE &#x670D;&#x52A1;&#x5668;&#x5728;&#x54EA;&#x91CC;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x77E5;&#x9053;&#x5982;&#x4F55;&#x4ECE; PXE &#x670D;&#x52A1;&#x5668;&#x4E0A;&#x4E0B;&#x8F7D;&#x67D0;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x53BB;&#x521D;&#x59CB;&#x5316;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x3002;</p>
+<h2 id="&#x89E3;&#x6790;-pxe-&#x7684;&#x5DE5;&#x4F5C;&#x8FC7;&#x7A0B;"><a name="&#x89E3;&#x6790;-pxe-&#x7684;&#x5DE5;&#x4F5C;&#x8FC7;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x6790;-pxe-&#x7684;&#x5DE5;&#x4F5C;&#x8FC7;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E3;&#x6790; PXE &#x7684;&#x5DE5;&#x4F5C;&#x8FC7;&#x7A0B;</h2>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x6765;&#x8BE6;&#x7EC6;&#x770B;&#x4E00;&#x4E0B; PXE &#x7684;&#x5DE5;&#x4F5C;&#x8FC7;&#x7A0B;&#x3002;</p>
+<p>&#x9996;&#x5148;&#xFF0C;&#x542F;&#x52A8; PXE &#x5BA2;&#x6237;&#x7AEF;&#x3002;&#x7B2C;&#x4E00;&#x6B65;&#x662F;&#x901A;&#x8FC7; DHCP &#x534F;&#x8BAE;&#x544A;&#x8BC9; DHCP Server&#xFF0C;&#x6211;&#x521A;&#x6765;&#xFF0C;&#x4E00;&#x7A77;&#x4E8C;&#x767D;&#xFF0C;&#x5565;&#x90FD;&#x6CA1;&#x6709;&#x3002;DHCP Server &#x4FBF;&#x79DF;&#x7ED9;&#x5B83;&#x4E00;&#x4E2A; IP &#x5730;&#x5740;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x7ED9;&#x5B83; PXE &#x670D;&#x52A1;&#x5668;&#x7684;&#x5730;&#x5740;&#x3001;&#x542F;&#x52A8;&#x6587;&#x4EF6; pxelinux.0&#x3002;</p>
+<p>&#x5176;&#x6B21;&#xFF0C;PXE &#x5BA2;&#x6237;&#x7AEF;&#x77E5;&#x9053;&#x8981;&#x53BB; PXE &#x670D;&#x52A1;&#x5668;&#x4E0B;&#x8F7D;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x521D;&#x59CB;&#x5316;&#x673A;&#x5668;&#x3002;&#x4E8E;&#x662F;&#x4FBF;&#x5F00;&#x59CB;&#x4E0B;&#x8F7D;&#xFF0C;&#x4E0B;&#x8F7D;&#x7684;&#x65F6;&#x5019;&#x4F7F;&#x7528;&#x7684;&#x662F; TFTP &#x534F;&#x8BAE;&#x3002;&#x6240;&#x4EE5; PXE &#x670D;&#x52A1;&#x5668;&#x4E0A;&#xFF0C;&#x5F80;&#x5F80;&#x8FD8;&#x9700;&#x8981;&#x6709;&#x4E00;&#x4E2A; TFTP &#x670D;&#x52A1;&#x5668;&#x3002;PXE &#x5BA2;&#x6237;&#x7AEF;&#x5411; TFTP &#x670D;&#x52A1;&#x5668;&#x8BF7;&#x6C42;&#x4E0B;&#x8F7D;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;TFTP &#x670D;&#x52A1;&#x5668;&#x8BF4;&#x597D;&#x554A;&#xFF0C;&#x4E8E;&#x662F;&#x5C31;&#x5C06;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x4F20;&#x7ED9;&#x5B83;&#x3002;</p>
+<p>&#x7136;&#x540E;&#xFF0C;PXE &#x5BA2;&#x6237;&#x7AEF;&#x6536;&#x5230;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x540E;&#xFF0C;&#x5C31;&#x5F00;&#x59CB;&#x6267;&#x884C;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x3002;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x4F1A;&#x6307;&#x793A; PXE &#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x5411; TFTP &#x670D;&#x52A1;&#x5668;&#x8BF7;&#x6C42;&#x8BA1;&#x7B97;&#x673A;&#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F; pxelinux.cfg&#x3002;TFTP &#x670D;&#x52A1;&#x5668;&#x4F1A;&#x7ED9; PXE &#x5BA2;&#x6237;&#x7AEF;&#x4E00;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x91CC;&#x9762;&#x4F1A;&#x8BF4;&#x5185;&#x6838;&#x5728;&#x54EA;&#x91CC;&#x3001;initramfs &#x5728;&#x54EA;&#x91CC;&#x3002;PXE &#x5BA2;&#x6237;&#x7AEF;&#x4F1A;&#x8BF7;&#x6C42;&#x8FD9;&#x4E9B;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x6700;&#x540E;&#xFF0C;&#x542F;&#x52A8; Linux &#x5185;&#x6838;&#x3002;&#x4E00;&#x65E6;&#x542F;&#x52A8;&#x4E86;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#xFF0C;&#x4EE5;&#x540E;&#x5C31;&#x5565;&#x90FD;&#x597D;&#x529E;&#x4E86;&#x3002;</p>
+<div align="center">
+ <a href="http://photo.hugethanks.cn/protocol-4.5.jpg" data-lightbox="4779735a-0960-4aed-a625-b803220433b1" data-title="undefined" target="_blank"><img src="http://photo.hugethanks.cn/protocol-4.5.jpg" alt="undefined"></a>
+</div>
+
+<h2 id="&#x5C0F;&#x7ED3;"><a name="&#x5C0F;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x5C0F;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5C0F;&#x7ED3;</h2>
+<p>&#x597D;&#x4E86;&#xFF0C;&#x8FD9;&#x4E00;&#x8282;&#x5C31;&#x5230;&#x8FD9;&#x91CC;&#x4E86;&#x3002;&#x6211;&#x6765;&#x603B;&#x7ED3;&#x4E00;&#x4E0B;&#x4ECA;&#x5929;&#x7684;&#x5185;&#x5BB9;&#xFF1A;</p>
+<ul>
+<li>DHCP &#x534F;&#x8BAE;&#x4E3B;&#x8981;&#x662F;&#x7528;&#x6765;&#x7ED9;&#x5BA2;&#x6237;&#x79DF;&#x7528; IP &#x5730;&#x5740;&#xFF0C;&#x548C;&#x623F;&#x4EA7;&#x4E2D;&#x4ECB;&#x5F88;&#x50CF;&#xFF0C;&#x8981;&#x5546;&#x8C08;&#x3001;&#x7B7E;&#x7EA6;&#x3001;&#x7EED;&#x79DF;&#xFF0C;&#x5E7F;&#x64AD;&#x8FD8;&#x4E0D;&#x80FD;&#x201C;&#x62A2;&#x5355;&#x201D;&#xFF1B;</li>
+<li>DHCP &#x534F;&#x8BAE;&#x80FD;&#x7ED9;&#x5BA2;&#x6237;&#x63A8;&#x8350;&#x201C;&#x88C5;&#x4FEE;&#x961F;&#x201D;PXE&#xFF0C;&#x80FD;&#x591F;&#x5B89;&#x88C5;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#xFF0C;&#x8FD9;&#x4E2A;&#x5728;&#x4E91;&#x8BA1;&#x7B97;&#x9886;&#x57DF;&#x5927;&#x6709;&#x7528;&#x5904;&#x3002;</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="protocol_3.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 03 ifconfig：最熟悉又陌生的命令行">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"04 DHCP与PXE：IP是怎么来的，又是怎么没的","level":"1.2.4","depth":2,"next":{"title":"奇淫巧技","level":"1.3","depth":1,"ref":"","articles":[{"title":"怎么申请谷歌邮箱","level":"1.3.1","depth":2,"path":"tips/google_email.md","ref":"tips/google_email.md","articles":[]},{"title":"如何科学上网","level":"1.3.2","depth":2,"path":"tips/vps.md","ref":"tips/vps.md","articles":[]}]},"previous":{"title":"03 ifconfig：最熟悉又陌生的命令行","level":"1.2.3","depth":2,"path":"protocol/protocol_3.md","ref":"protocol/protocol_3.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","prism","search-pro","chapter-fold","expandable-chapters","splitter","anchor-navigation-ex","back-to-top-button","lightbox","hide-element","favicon","donate","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{},"livereload":{},"splitter":{},"search-pro":{},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"微信赞赏","title":"","wechat":"http://photo.hugethanks.cn/payment_code.jpg","wechatText":"微信打赏"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":false,"showLevel":false},"favicon":{"shortcut":"http://photo.hugethanks.cn/resous_logo.ico","bookmark":"http://photo.hugethanks.cn/resous_logo.ico","appleTouch":"http://photo.hugethanks.cn/resous_logo.ico","appleTouchMore":{"120x120":"http://photo.hugethanks.cn/resous_logo.ico","180x180":"http://photo.hugethanks.cn/resous_logo.ico"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"元稹","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"一期一会","language":"zh-hans","gitbook":"*","description":"一期一会"},"file":{"path":"protocol/protocol_4.md","mtime":"2020-03-28T14:41:09.324Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-28T14:41:17.247Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
