@@ -1,0 +1,42 @@
+{
+    "title": "一期一会",
+    "description": "一期一会",
+    "author": "元稹",
+    "language": "zh-hans",
+    "root": ".",
+
+    "plugins": [
+        "-lunr",
+        "-search",
+        "-highlight",
+        "prism",
+        "prism-themes",
+        "search-pro",      
+        "chapter-fold",
+        "expandable-chapters",
+        "splitter",
+        "anchor-navigation-ex",
+        "back-to-top-button",
+        "lightbox",
+        "hide-element",
+        "donate"
+    ],
+
+    "pluginsConfig": {
+        "prism": {
+            "css": ["prism-themes/themes/prism-material-oceanic.css"]
+        },
+        "anchor-navigation-ex": {
+            "showLevel": false,
+            "showGoTop": false
+        },
+       "hide-element": {
+            "elements": [".gitbook-link"]
+        },
+        "donate": {
+            "wechat": "http://photo.hugethanks.cn/payment_furnace.jpeg",
+            "title": "",
+            "button": "微信赞赏"
+        }
+    }
+}

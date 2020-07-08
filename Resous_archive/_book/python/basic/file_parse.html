@@ -1,0 +1,925 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>文件解析 · 一期一会</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="元稹">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-material-oceanic.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="database.html" />
+    
+    
+    <link rel="prev" href="function.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Welcome
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    投资理财
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../invest/tool.html">
+            
+                <a href="../../invest/tool.html">
+            
+                    
+                    经济指标查询链接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../invest/morningstar.html">
+            
+                <a href="../../invest/morningstar.html">
+            
+                    
+                    如何利用晨星网选基金
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Python
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    环境搭建
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../environment/python.html">
+            
+                <a href="../environment/python.html">
+            
+                    
+                    Python 3.7 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../environment/mysql.html">
+            
+                <a href="../environment/mysql.html">
+            
+                    
+                    MySQL 数据库安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../environment/pycharm.html">
+            
+                <a href="../environment/pycharm.html">
+            
+                    
+                    PyCharm 集成开发环境安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../environment/pipenv.html">
+            
+                <a href="../environment/pipenv.html">
+            
+                    
+                    Pipenv 包管理工具安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    Python 基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="data_type.html">
+            
+                <a href="data_type.html">
+            
+                    
+                    数据类型与变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="data_structure.html">
+            
+                <a href="data_structure.html">
+            
+                    
+                    数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="determine_iterate.html">
+            
+                <a href="determine_iterate.html">
+            
+                    
+                    判断与循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="advanced_features.html">
+            
+                <a href="advanced_features.html">
+            
+                    
+                    高级特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="function.html">
+            
+                <a href="function.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2.6" data-path="file_parse.html">
+            
+                <a href="file_parse.html">
+            
+                    
+                    文件解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="database.html">
+            
+                <a href="database.html">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" >
+            
+                <span>
+            
+                    
+                    数据分析
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../data_analysis/numpy.html">
+            
+                <a href="../data_analysis/numpy.html">
+            
+                    
+                    Numpy介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../data_analysis/pandas.html">
+            
+                <a href="../data_analysis/pandas.html">
+            
+                    
+                    Pandas介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" >
+            
+                <span>
+            
+                    
+                    Django 框架
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../django/django.html">
+            
+                <a href="../django/django.html">
+            
+                    
+                    创建第一个 Django 应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../django/django_deploy.html">
+            
+                <a href="../django/django_deploy.html">
+            
+                    
+                    Django 应用部署与监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    逸致
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../pleasure/google_hacking.html">
+            
+                <a href="../../pleasure/google_hacking.html">
+            
+                    
+                    通过 Google Hacking 语法进行信息采集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../pleasure/google_email.html">
+            
+                <a href="../../pleasure/google_email.html">
+            
+                    
+                    怎么申请谷歌邮箱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../pleasure/vps.html">
+            
+                <a href="../../pleasure/vps.html">
+            
+                    
+                    如何开心愉快
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../pleasure/crawler_web.html">
+            
+                <a href="../../pleasure/crawler_web.html">
+            
+                    
+                    如何扒取整站内容
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >文件解析</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x6587;&#x4EF6;&#x89E3;&#x6790;"><b></b>&#x6587;&#x4EF6;&#x89E3;&#x6790;</a></li><ul><ul><li><span class="title-icon "></span><a href="#txt&#x6587;&#x4EF6;&#x89E3;&#x6790;"><b></b>TXT&#x6587;&#x4EF6;&#x89E3;&#x6790;</a></li><li><span class="title-icon "></span><a href="#json&#x6587;&#x4EF6;&#x89E3;&#x6790;"><b></b>JSON&#x6587;&#x4EF6;&#x89E3;&#x6790;</a></li><li><span class="title-icon "></span><a href="#excel&#x6587;&#x4EF6;&#x89E3;&#x6790;"><b></b>Excel&#x6587;&#x4EF6;&#x89E3;&#x6790;</a></li></ul></ul></ul></div><h1 id="&#x6587;&#x4EF6;&#x89E3;&#x6790;"><a name="&#x6587;&#x4EF6;&#x89E3;&#x6790;" class="anchor-navigation-ex-anchor" href="#&#x6587;&#x4EF6;&#x89E3;&#x6790;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6587;&#x4EF6;&#x89E3;&#x6790;</h1>
+<h3 id="txt&#x6587;&#x4EF6;&#x89E3;&#x6790;"><a name="txt&#x6587;&#x4EF6;&#x89E3;&#x6790;" class="anchor-navigation-ex-anchor" href="#txt&#x6587;&#x4EF6;&#x89E3;&#x6790;"><i class="fa fa-link" aria-hidden="true"></i></a>TXT&#x6587;&#x4EF6;&#x89E3;&#x6790;</h3>
+<h4 id="&#x6253;&#x5F00;&#x6587;&#x4EF6;"><a name="&#x6253;&#x5F00;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x6253;&#x5F00;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6253;&#x5F00;&#x6587;&#x4EF6;</h4>
+<pre class="language-"><code>f = open(filename, access_mode=&apos;r&apos;, buffering=-1)
+
+# filename:&#x6587;&#x4EF6;&#x540D;
+# access_mode&#xFF1A;&#x6253;&#x5F00;&#x65B9;&#x5F0F;&#xFF08;r&#x8BFB;&#xFF0C;w&#x5199;&#xFF0C;a&#x8FFD;&#x52A0;&#xFF09;
+# buffering&#xFF1A;&#x9ED8;&#x8BA4;&#x503C;
+</code></pre><h4 id="&#x6587;&#x4EF6;&#x64CD;&#x4F5C;"><a name="&#x6587;&#x4EF6;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x6587;&#x4EF6;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6587;&#x4EF6;&#x64CD;&#x4F5C;</h4>
+<pre class="language-"><code>f = open(&apos;./test.txt&apos;, &apos;r&apos;)
+for line in f.readlines():
+    print(line)
+f.close()
+
+# read()&#x8BFB;&#x53D6;&#x6574;&#x4E2A;&#x6587;&#x4EF6;&#x5230;&#x5B57;&#x7B26;&#x4E32;&#x53D8;&#x91CF;&#x4E2D;
+# readline()&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x4E00;&#x884C;&#xFF0C;&#x7136;&#x540E;&#x8FD4;&#x56DE;&#x6574;&#x884C;&#xFF08;&#x5305;&#x62EC;&#x884C;&#x7ED3;&#x675F;&#x7B26;&#xFF09;&#x5230;&#x5B57;&#x7B26;&#x4E32;&#x53D8;&#x91CF;&#x4E2D;
+# readlines()&#x8BFB;&#x53D6;&#x6574;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x5217;&#x8868;&#xFF0C;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4EE3;&#x8868;&#x4E00;&#x884C;
+</code></pre><pre class="language-"><code># write()&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x8F93;&#x51FA;&#x5230;&#x6587;&#x4EF6;&#x4E2D;
+f = open(&apos;./test.txt&apos;, &apos;w&apos;)
+f.write(&apos;welcome to my house&apos;)
+f.close()
+
+# writelines()&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x5217;&#x8868;&#x5199;&#x5165;&#x6587;&#x4EF6;&#xFF0C;&#x884C;&#x7ED3;&#x675F;&#x7B26;&#x5E76;&#x4E0D;&#x4F1A;&#x81EA;&#x52A8;&#x88AB;&#x52A0;&#x5165;&#xFF0C;&#x9700;&#x8981;&#x624B;&#x52A8;&#x5728;&#x6BCF;&#x884C;&#x7684;&#x7ED3;&#x5C3E;&#x52A0;&#x5165;&#x884C;&#x7ED3;&#x675F;&#x7B26;
+f = open(&apos;./test.txt&apos;, &apos;w&apos;)
+w = [&apos;hello\n&apos;, &apos;world&apos;]
+f.writelines(w)
+f.close()
+</code></pre><h3 id="json&#x6587;&#x4EF6;&#x89E3;&#x6790;"><a name="json&#x6587;&#x4EF6;&#x89E3;&#x6790;" class="anchor-navigation-ex-anchor" href="#json&#x6587;&#x4EF6;&#x89E3;&#x6790;"><i class="fa fa-link" aria-hidden="true"></i></a>JSON&#x6587;&#x4EF6;&#x89E3;&#x6790;</h3>
+<p>JSON(JavaScript Object Notation) &#x662F;&#x4E00;&#x79CD;&#x8F7B;&#x91CF;&#x7EA7;&#x7684;&#x6570;&#x636E;&#x4EA4;&#x6362;&#x683C;&#x5F0F;&#x3002;&#x5B83;&#x662F;&#x57FA;&#x4E8E;ECMAScript&#x7684;&#x4E00;&#x4E2A;&#x5B50;&#x96C6;&#x3002; JSON&#x91C7;&#x7528;&#x5B8C;&#x5168;&#x72EC;&#x7ACB;&#x4E8E;&#x8BED;&#x8A00;&#x7684;&#x6587;&#x672C;&#x683C;&#x5F0F;&#xFF0C;&#x4F46;&#x662F;&#x4E5F;&#x4F7F;&#x7528;&#x4E86;&#x7C7B;&#x4F3C;&#x4E8E;C&#x8BED;&#x8A00;&#x5BB6;&#x65CF;&#x7684;&#x4E60;&#x60EF;(&#x5305;&#x62EC;C&#x3001;C++&#x3001;Java&#x3001;JavaScript&#x3001;Perl&#x3001;Python&#x7B49;)&#x3002;&#x8FD9;&#x4E9B;&#x7279;&#x6027;&#x4F7F;JSON&#x6210;&#x4E3A;&#x7406;&#x60F3;&#x7684;&#x6570;&#x636E;&#x4EA4;&#x6362;&#x8BED;&#x8A00;&#x3002;&#x6613;&#x4E8E;&#x4EBA;&#x9605;&#x8BFB;&#x548C;&#x7F16;&#x5199;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x6613;&#x4E8E;&#x673A;&#x5668;&#x89E3;&#x6790;&#x548C;&#x751F;&#x6210;(&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x63D0;&#x5347;&#x7F51;&#x7EDC;&#x4F20;&#x8F93;&#x901F;&#x7387;)&#x3002;</p>
+<p>json&#x7684;<a href="http://json.org" target="_blank">&#x5B98;&#x65B9;&#x6587;&#x6863;</a>&#x3002;</p>
+<h4 id="api"><a name="api" class="anchor-navigation-ex-anchor" href="#api"><i class="fa fa-link" aria-hidden="true"></i></a>API</h4>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Annotation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>json.load( )</td>
+<td>&#x628A;&#x6587;&#x4EF6;&#x6253;&#x5F00;&#xFF0C;&#x5E76;&#x628A;&#x5B57;&#x7B26;&#x4E32;&#x53D8;&#x6362;&#x4E3A;&#x6570;&#x636E;&#x7C7B;&#x578B;</td>
+</tr>
+<tr>
+<td>json.loads( )</td>
+<td>&#x5C06; &#x5B57;&#x7B26;&#x4E32; &#x8F6C;&#x6362;&#x4E3A; &#x5B57;&#x5178;</td>
+</tr>
+<tr>
+<td>json.dump( , )</td>
+<td>&#x5C06;&#x6570;&#x636E;&#x5199;&#x5165;json&#x6587;&#x4EF6;&#x4E2D;</td>
+</tr>
+<tr>
+<td>json.dumps( )</td>
+<td>&#x5C06;python&#x4E2D;&#x7684; &#x5B57;&#x5178; &#x8F6C;&#x6362;&#x4E3A; &#x5B57;&#x7B26;&#x4E32;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x6587;&#x4EF6;&#x8F6C;&#x6362;"><a name="&#x6587;&#x4EF6;&#x8F6C;&#x6362;" class="anchor-navigation-ex-anchor" href="#&#x6587;&#x4EF6;&#x8F6C;&#x6362;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6587;&#x4EF6;&#x8F6C;&#x6362;</h4>
+<pre class="language-"><code>import json
+
+dict_data = {&quot;City&quot;: &quot;Nanjing&quot;, &quot;Year&quot;: 2018, &quot;Province&quot;: &quot;Jiangshu&quot;}
+
+# dumps&#xFF1A;&#x5C06;python&#x4E2D;&#x7684; &#x5B57;&#x5178; &#x8F6C;&#x6362;&#x4E3A; &#x5B57;&#x7B26;&#x4E32;
+str_1 = json.dumps(dict_data)
+assert isinstance(str_1, str)
+
+# loads: &#x5C06; &#x5B57;&#x7B26;&#x4E32; &#x8F6C;&#x6362;&#x4E3A; &#x5B57;&#x5178;
+dict_2 = json.loads(str_1)
+assert isinstance(dict_2, dict)
+</code></pre><h4 id="&#x6587;&#x4EF6;&#x64CD;&#x4F5C;_1"><a name="&#x6587;&#x4EF6;&#x64CD;&#x4F5C;_1" class="anchor-navigation-ex-anchor" href="#&#x6587;&#x4EF6;&#x64CD;&#x4F5C;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6587;&#x4EF6;&#x64CD;&#x4F5C;</h4>
+<pre class="language-"><code>import json
+
+dict_data = {&quot;City&quot;: &quot;Nanjing&quot;, &quot;Year&quot;: 2018, &quot;Province&quot;: &quot;Jiangshu&quot;}
+
+# dump: &#x5C06;&#x6570;&#x636E;&#x5199;&#x5165;json&#x6587;&#x4EF6;&#x4E2D;
+with open(&quot;./test.json&quot;, &quot;w&quot;) as dump_f:
+    json.dump(dict_data, dump_f, ensure_ascii=False, indent=4)
+
+# load:&#x628A;&#x6587;&#x4EF6;&#x6253;&#x5F00;&#xFF0C;&#x5E76;&#x628A;&#x5B57;&#x7B26;&#x4E32;&#x53D8;&#x6362;&#x4E3A;&#x6570;&#x636E;&#x7C7B;&#x578B;
+with open(&quot;./test.json&quot;, &quot;r&quot;) as load_f:
+    dict_3 = json.load(load_f)
+assert isinstance(dict_3, dict)
+</code></pre><h3 id="excel&#x6587;&#x4EF6;&#x89E3;&#x6790;"><a name="excel&#x6587;&#x4EF6;&#x89E3;&#x6790;" class="anchor-navigation-ex-anchor" href="#excel&#x6587;&#x4EF6;&#x89E3;&#x6790;"><i class="fa fa-link" aria-hidden="true"></i></a>Excel&#x6587;&#x4EF6;&#x89E3;&#x6790;</h3>
+<h4 id="&#x56DB;&#x79CD;&#x65B9;&#x6CD5;&#x4F7F;&#x7528;&#x8303;&#x56F4;&#x6BD4;&#x8F83;"><a name="&#x56DB;&#x79CD;&#x65B9;&#x6CD5;&#x4F7F;&#x7528;&#x8303;&#x56F4;&#x6BD4;&#x8F83;" class="anchor-navigation-ex-anchor" href="#&#x56DB;&#x79CD;&#x65B9;&#x6CD5;&#x4F7F;&#x7528;&#x8303;&#x56F4;&#x6BD4;&#x8F83;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x56DB;&#x79CD;&#x65B9;&#x6CD5;&#x4F7F;&#x7528;&#x8303;&#x56F4;&#x6BD4;&#x8F83;</h4>
+<table>
+<thead>
+<tr>
+<th>\</th>
+<th>xlrd</th>
+<th>xlwt</th>
+<th>XlsxWriter</th>
+<th>openpyxl </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> &#x4ECB;&#x7ECD;</td>
+<td>&#x8BFB;&#x53D6;xls&#x6587;&#x4EF6;</td>
+<td>&#x5199;&#x51FA;xls&#x6587;&#x4EF6;</td>
+<td>&#x521B;&#x5EFA;xlsx&#x6587;&#x4EF6;</td>
+<td>&#x8BFB;&#x5199;xlsx&#x3001;xlsm&#x6587;&#x4EF6; </td>
+</tr>
+<tr>
+<td> &#x8BFB;</td>
+<td>&#x221A;</td>
+<td>&#xD7;</td>
+<td>&#xD7;</td>
+<td>&#x221A; </td>
+</tr>
+<tr>
+<td> &#x5199;</td>
+<td>&#xD7;</td>
+<td>&#x221A;</td>
+<td>&#x221A;</td>
+<td>&#x221A; </td>
+</tr>
+<tr>
+<td> xls</td>
+<td>&#x221A;</td>
+<td>&#x221A;</td>
+<td>&#xD7;</td>
+<td>&#xD7; </td>
+</tr>
+<tr>
+<td> xlsx</td>
+<td>&#xD7;</td>
+<td>&#xD7;</td>
+<td>&#x221A;</td>
+<td>&#x221A; </td>
+</tr>
+</tbody>
+</table>
+<p>&#x6CE8;&#xFF1A;Excel2003&#x5373;XLS&#x6587;&#x4EF6;&#x6709;&#x5927;&#x5C0F;&#x9650;&#x5236;&#x5373;65536&#x884C;256&#x5217;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x652F;&#x6301;&#x5927;&#x6587;&#x4EF6;&#xFF0C;&#x800C;Excel2007&#x4EE5;&#x4E0A;&#x5373;XLSX&#x6587;&#x4EF6;&#x7684;&#x9650;&#x5236;&#x5219;&#x4E3A;1048576&#x884C;16384&#x5217;&#x3002;</p>
+<h4 id="xlwt&#x5199;&#x5165;xls&#x6587;&#x4EF6;"><a name="xlwt&#x5199;&#x5165;xls&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#xlwt&#x5199;&#x5165;xls&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>xlwt&#x5199;&#x5165;xls&#x6587;&#x4EF6;</h4>
+<pre class="language-"><code>import xlwt
+
+book = xlwt.Workbook()  # &#x65B0;&#x5EFA;&#x5DE5;&#x4F5C;&#x7C3F;
+table = book.add_sheet(&apos;Over&apos;, cell_overwrite_ok=True)  # &#x5982;&#x679C;&#x5BF9;&#x540C;&#x4E00;&#x5355;&#x5143;&#x683C;&#x91CD;&#x590D;&#x64CD;&#x4F5C;&#x4F1A;&#x53D1;&#x751F;overwrite Exception&#xFF0C;cell_overwrite_ok&#x4E3A;&#x53EF;&#x8986;&#x76D6;
+sheet = book.add_sheet(&apos;Test&apos;)  # &#x6DFB;&#x52A0;&#x5DE5;&#x4F5C;&#x9875;
+sheet.write(1, 1, &apos;A&apos;)  # &#x884C;&#xFF0C;&#x5217;&#xFF0C;&#x5C5E;&#x6027;&#x503C;,&#xFF08;1,1&#xFF09;&#x4E3A;B2&#x5143;&#x7D20;&#xFF0C;&#x4ECE;0&#x5F00;&#x59CB;&#x8BA1;&#x6570;
+style = xlwt.XFStyle()  # &#x65B0;&#x5EFA;&#x6837;&#x5F0F;
+font = xlwt.Font()  # &#x65B0;&#x5EFA;&#x5B57;&#x4F53;
+font.name = &apos;Times New Roman&apos;
+font.bold = True
+style.font = font  # &#x5C06;style&#x7684;&#x5B57;&#x4F53;&#x8BBE;&#x7F6E;&#x4E3A;font
+table.write(0, 0, &apos;Test&apos;, style)
+book.save(filename_or_stream=&apos;excel_test.xls&apos;)  # &#x4E00;&#x5B9A;&#x8981;&#x4FDD;&#x5B58;
+</code></pre><h4 id="xlrd&#x8BFB;&#x53D6;xls&#x6587;&#x4EF6;"><a name="xlrd&#x8BFB;&#x53D6;xls&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#xlrd&#x8BFB;&#x53D6;xls&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>xlrd&#x8BFB;&#x53D6;xls&#x6587;&#x4EF6;</h4>
+<pre class="language-"><code>import xlrd
+
+data = xlrd.open_workbook(&apos;./excel_test.xls&apos;)  # &#x6253;&#x5F00;&#x5DE5;&#x4F5C;&#x7C3F;
+print(data.sheet_names())  # &#x8F93;&#x51FA;&#x6240;&#x6709;&#x9875;&#x7684;&#x540D;&#x79F0;
+table = data.sheets()[0]  # &#x83B7;&#x53D6;&#x7B2C;&#x4E00;&#x9875;
+# table = data.sheet_by_index(0)  # &#x901A;&#x8FC7;&#x7D22;&#x5F15;&#x83B7;&#x5F97;&#x7B2C;&#x4E00;&#x9875;
+# table = data.sheet_by_name(&apos;Over&apos;)  # &#x901A;&#x8FC7;&#x540D;&#x79F0;&#x6765;&#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x9875;
+nrows = table.nrows  # &#x4E3A;&#x884C;&#x6570;&#xFF0C;&#x6574;&#x5F62;
+ncolumns = table.ncols  # &#x4E3A;&#x5217;&#x6570;&#xFF0C;&#x6574;&#x5F62;
+print(nrows)
+print(ncolumns)
+print(type(nrows))
+print(table.row_values(0))  # &#x8F93;&#x51FA;&#x7B2C;&#x4E00;&#x884C;&#x503C;&#xFF0C;&#x4E3A;&#x4E00;&#x4E2A;&#x5217;&#x8868;
+# &#x904D;&#x5386;&#x8F93;&#x51FA;&#x6240;&#x6709;&#x884C;&#x503C;
+for row in range(nrows):
+    print(table.row_values(row))
+# &#x8F93;&#x51FA;&#x67D0;&#x4E00;&#x4E2A;&#x5355;&#x5143;&#x683C;&#x503C;
+print(table.cell(0, 0).value)
+print(table.row(0)[0].value)
+</code></pre><h4 id="&#x7EFC;&#x5408;&#x4F7F;&#x7528;python-excel&#x4E09;&#x5927;&#x6A21;&#x5757;&#x5B8C;&#x6210;excel&#x5185;&#x5BB9;&#x8FFD;&#x52A0;&#x5199;&#x5165;"><a name="&#x7EFC;&#x5408;&#x4F7F;&#x7528;python-excel&#x4E09;&#x5927;&#x6A21;&#x5757;&#x5B8C;&#x6210;excel&#x5185;&#x5BB9;&#x8FFD;&#x52A0;&#x5199;&#x5165;" class="anchor-navigation-ex-anchor" href="#&#x7EFC;&#x5408;&#x4F7F;&#x7528;python-excel&#x4E09;&#x5927;&#x6A21;&#x5757;&#x5B8C;&#x6210;excel&#x5185;&#x5BB9;&#x8FFD;&#x52A0;&#x5199;&#x5165;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EFC;&#x5408;&#x4F7F;&#x7528;python-excel&#x4E09;&#x5927;&#x6A21;&#x5757;&#x5B8C;&#x6210;Excel&#x5185;&#x5BB9;&#x8FFD;&#x52A0;&#x5199;&#x5165;</h4>
+<pre class="language-"><code>import xlwt, xlrd
+from xlutils.copy import copy
+
+data = xlrd.open_workbook(&apos;excel_test.xls&apos;, formatting_info=True)
+excel = copy(wb=data)  # &#x5B8C;&#x6210;xlrd&#x5BF9;&#x8C61;&#x5411;xlwt&#x5BF9;&#x8C61;&#x8F6C;&#x6362;
+excel_table = excel.get_sheet(0)  # &#x83B7;&#x5F97;&#x8981;&#x64CD;&#x4F5C;&#x7684;&#x9875;
+table = data.sheets()[0]
+nrows = table.nrows  # &#x83B7;&#x5F97;&#x884C;&#x6570;
+ncols = table.ncols  # &#x83B7;&#x5F97;&#x5217;&#x6570;
+values = [&quot;E&quot;, &quot;X&quot;, &quot;C&quot;, &quot;E&quot;, &quot;L&quot;]  # &#x9700;&#x8981;&#x5199;&#x5165;&#x7684;&#x503C;
+for value in values:
+    excel_table.write(nrows, 1, value)  # &#x56E0;&#x4E3A;&#x5355;&#x5143;&#x683C;&#x4ECE;0&#x5F00;&#x59CB;&#x7B97;&#xFF0C;&#x6240;&#x4EE5;row&#x4E0D;&#x9700;&#x8981;&#x52A0;&#x4E00;
+    nrows = nrows + 1
+excel.save(&apos;excel_test.xls&apos;)
+</code></pre><h4 id="xlsxwriter"><a name="xlsxwriter" class="anchor-navigation-ex-anchor" href="#xlsxwriter"><i class="fa fa-link" aria-hidden="true"></i></a>XlsxWriter</h4>
+<pre class="language-"><code>import xlsxwriter
+
+workbook = xlsxwriter.Workbook(&apos;demo1.xlsx&apos;)  # &#x521B;&#x5EFA;&#x4E00;&#x4E2A;Excel&#x6587;&#x4EF6;
+worksheet = workbook.add_worksheet()  # &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5DE5;&#x4F5C;&#x8868;sheet&#x5BF9;&#x8C61;
+worksheet.set_column(&apos;A:A&apos;, 20)  # &#x8BBE;&#x5B9A;&#x7B2C;&#x4E00;&#x5217;&#xFF08;A&#xFF09;&#x5BBD;&#x5EA6;&#x4E3A;20&#x50CF;&#x7D20;
+bold = workbook.add_format({&apos;bold&apos;: True})  # &#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x52A0;&#x7C97;&#x7684;&#x683C;&#x5F0F;&#x5BF9;&#x8C61;
+# &#x5411;&#x5355;&#x5143;&#x683C;&#x5199;&#x5165;&#x6570;&#x636E;
+worksheet.write(&apos;A1&apos;, &apos;Hello&apos;)  # &#x5411;A1&#x5355;&#x5143;&#x683C;&#x5199;&#x5165;&apos;Hello&apos;
+worksheet.write(&apos;A2&apos;, &apos;World&apos;, bold)  # &#x5411;A2&#x5355;&#x5143;&#x683C;&#x5199;&#x5165;&apos;World&apos;&#x5E76;&#x4F7F;&#x7528;bold&#x52A0;&#x7C97;&#x683C;&#x5F0F;
+worksheet.write(&apos;B2&apos;, u&apos;&#x4E2D;&#x6587;&#x5B57;&#x7B26;&apos;, bold)  # &#x5411;B2&#x5355;&#x5143;&#x683C;&#x5199;&#x5165;&#x4E2D;&#x6587;&#x5E76;&#x4F7F;&#x7528;&#x52A0;&#x7C97;&#x683C;&#x5F0F;
+worksheet.write(2, 0, 10)  # &#x7528;&#x884C;&#x5217;&#x8868;&#x793A;&#x6CD5;&#xFF08;&#x884C;&#x5217;&#x7D22;&#x5F15;&#x90FD;&#x4ECE;0&#x5F00;&#x59CB;&#xFF09;&#x5411;&#x7B2C;2&#x884C;&#x3001;&#x7B2C;0&#x5217;&#xFF08;&#x5373;A3&#x5355;&#x5143;&#x683C;&#xFF09;&#x548C;&#x7B2C;3&#x884C;&#x3001;&#x7B2C;0&#x5217;&#xFF08;&#x5373;A4&#x5355;&#x5143;&#x683C;&#xFF09;&#x5199;&#x5165;&#x6570;&#x5B57;
+worksheet.write(3, 0, 20)
+worksheet.write(4, 0, &apos;=SUM(A3:A4)&apos;)  # &#x6C42;A3&#x3001;A4&#x5355;&#x5143;&#x683C;&#x7684;&#x548C;&#x5E76;&#x5199;&#x5165;A5&#x5355;&#x5143;&#x683C;&#xFF0C;&#x7531;&#x6B64;&#x53EF;&#x89C1;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x516C;&#x5F0F;
+# worksheet.insert_image(&apos;B5&apos;, &apos;./welcome.jpg&apos;)  # &#x5728;B5&#x5355;&#x5143;&#x683C;&#x63D2;&#x5165;&#x56FE;&#x7247;
+workbook.close()  # &#x5173;&#x95ED;&#x5E76;&#x4FDD;&#x5B58;&#x6587;&#x4EF6;
+</code></pre><h4 id="&#x4F7F;&#x7528;openpyxl&#x5199;&#x5165;xlsx&#x6587;&#x4EF6;"><a name="&#x4F7F;&#x7528;openpyxl&#x5199;&#x5165;xlsx&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;openpyxl&#x5199;&#x5165;xlsx&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x7528;openpyxl&#x5199;&#x5165;xlsx&#x6587;&#x4EF6;</h4>
+<pre class="language-"><code>import openpyxl
+
+data = openpyxl.Workbook()  # &#x65B0;&#x5EFA;&#x5DE5;&#x4F5C;&#x7C3F;
+data.create_sheet(&apos;Sheet1&apos;)  # &#x6DFB;&#x52A0;&#x9875;
+# table = data.get_sheet_by_name(&apos;Sheet1&apos;) # &#x83B7;&#x5F97;&#x6307;&#x5B9A;&#x540D;&#x79F0;&#x9875;
+table = data.active  # &#x83B7;&#x5F97;&#x5F53;&#x524D;&#x6D3B;&#x8DC3;&#x7684;&#x5DE5;&#x4F5C;&#x9875;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x7B2C;&#x4E00;&#x4E2A;&#x5DE5;&#x4F5C;&#x9875;
+table.cell(1, 1, &apos;Test&apos;)  # &#x884C;&#xFF0C;&#x5217;&#xFF0C;&#x503C; &#x8FD9;&#x91CC;&#x662F;&#x4ECE;1&#x5F00;&#x59CB;&#x8BA1;&#x6570;&#x7684;
+data.save(&apos;excel_test.xlsx&apos;)  # &#x4E00;&#x5B9A;&#x8981;&#x4FDD;&#x5B58;
+</code></pre><h4 id="&#x4F7F;&#x7528;openpyxl&#x8BFB;&#x53D6;xlsx&#x6587;&#x4EF6;"><a name="&#x4F7F;&#x7528;openpyxl&#x8BFB;&#x53D6;xlsx&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;openpyxl&#x8BFB;&#x53D6;xlsx&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x7528;openpyxl&#x8BFB;&#x53D6;xlsx&#x6587;&#x4EF6;</h4>
+<pre class="language-"><code>import openpyxl
+
+data = openpyxl.load_workbook(&apos;excel_test.xlsx&apos;)  # &#x8BFB;&#x53D6;xlsx&#x6587;&#x4EF6;
+table = data[&apos;Sheet&apos;]  # &#x83B7;&#x5F97;&#x6307;&#x5B9A;&#x540D;&#x79F0;&#x7684;&#x9875;
+nrows = table.rows  # &#x83B7;&#x5F97;&#x884C;&#x6570;&#xFF0C;&#x7C7B;&#x578B;&#x4E3A;&#x8FED;&#x4EE3;&#x5668;
+ncols = table.columns  # &#x83B7;&#x5F97;&#x5217;&#x6570;&#xFF0C;&#x7C7B;&#x578B;&#x4E3A;&#x8FED;&#x4EE3;&#x5668;
+for row in nrows:
+    print(row)  # &#x5305;&#x542B;&#x4E86;&#x9875;&#x540D;&#xFF0C;cell&#xFF0C;&#x503C;
+    line = [col.value for col in row]  # &#x53D6;&#x503C;
+    print(line)
+# &#x8BFB;&#x53D6;&#x5355;&#x5143;&#x683C;
+print(table.cell(1, 1).value)
+</code></pre><h4 id="&#x7EFC;&#x5408;&#x4F7F;&#x7528;openpyxl&#x5BF9;excel&#x5185;&#x5BB9;&#x8FFD;&#x52A0;&#x5199;&#x5165;"><a name="&#x7EFC;&#x5408;&#x4F7F;&#x7528;openpyxl&#x5BF9;excel&#x5185;&#x5BB9;&#x8FFD;&#x52A0;&#x5199;&#x5165;" class="anchor-navigation-ex-anchor" href="#&#x7EFC;&#x5408;&#x4F7F;&#x7528;openpyxl&#x5BF9;excel&#x5185;&#x5BB9;&#x8FFD;&#x52A0;&#x5199;&#x5165;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EFC;&#x5408;&#x4F7F;&#x7528;openpyxl&#x5BF9;Excel&#x5185;&#x5BB9;&#x8FFD;&#x52A0;&#x5199;&#x5165;</h4>
+<pre class="language-"><code>import openpyxl
+
+data = openpyxl.load_workbook(&apos;excel_test.xlsx&apos;)
+# print(data.sheetnames)  # &#x8F93;&#x51FA;&#x6240;&#x6709;&#x5DE5;&#x4F5C;&#x9875;&#x7684;&#x540D;&#x79F0;
+# &#x53D6;&#x7B2C;&#x4E00;&#x5F20;&#x8868;
+sheetnames = data.sheetnames
+table = data[sheetnames[0]]
+# table = data.active
+# print(table.title)  # &#x8F93;&#x51FA;&#x8868;&#x540D;
+nrows = table.max_row  # &#x83B7;&#x5F97;&#x884C;&#x6570;
+ncolumns = table.max_column  # &#x83B7;&#x5F97;&#x5217;&#x6570;
+print(nrows, ncolumns)
+values = [&apos;E&apos;, &apos;X&apos;, &apos;C&apos;, &apos;E&apos;, &apos;L&apos;]
+for value in values:
+    table.cell(nrows + 1, 1).value = value
+    nrows = nrows + 1
+data.save(&apos;excel_test.xlsx&apos;)
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="function.html" class="navigation navigation-prev " aria-label="Previous page: 函数">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="database.html" class="navigation navigation-next " aria-label="Next page: 数据库">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"文件解析","level":"1.3.2.6","depth":3,"next":{"title":"数据库","level":"1.3.2.7","depth":3,"path":"python/basic/database.md","ref":"python/basic/database.md","articles":[]},"previous":{"title":"函数","level":"1.3.2.5","depth":3,"path":"python/basic/function.md","ref":"python/basic/function.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","prism","prism-themes","search-pro","chapter-fold","expandable-chapters","splitter","anchor-navigation-ex","back-to-top-button","lightbox","hide-element","donate","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prism-themes/themes/prism-material-oceanic.css"]},"livereload":{},"splitter":{},"search-pro":{},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"微信赞赏","title":"","wechat":"http://photo.hugethanks.cn/payment_furnace.jpeg","wechatText":"微信打赏"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":false,"showLevel":false},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"prism-themes":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"元稹","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"一期一会","language":"zh-hans","gitbook":"*","description":"一期一会"},"file":{"path":"python/basic/file_parse.md","mtime":"2020-06-07T10:56:29.028Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-08T11:50:18.963Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
