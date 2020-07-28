@@ -54,8 +54,218 @@ Or | 逻辑或
 
 ## 基本语句
 ### 条件语句
+#### If 条件判断
+**语法格式：**
+
+```
+If 条件  Then // 参数1是条件型，任意有效的表达式
+执行语句
+End If // 无返回值
+```
+
+**脚本案例：**
+
+```
+例子1：
+Dim i=0
+If i=0 Then
+    TracePrint "条件判断符合被通过!!"
+End If
+//通过判断表达式的取值，来执行后面的动作或控制
+
+例子2：
+Dim i=0
+If i=0 Then
+    TracePrint "条件判断符合被通过!!"
+ElseIf i=1 Then
+    TracePrint "否则条件判断符合被通过!!"
+Else
+    TracePrint "否则!!"
+End If
+//通过判断表达式的取值，来执行后面的动作或控制
+```
+
+#### Select Case 情况选择
+**语法格式：**
+
+```
+Select Case 变量 // 变量：任意有效变量，检查是否与下面值相等
+Case 值1[,值2,...] // 值：任意有效值，不支持判断语句，多个值用逗号“,”隔开表示逻辑运算中的“或”运算
+执行语句1
+Case Else
+执行语句2
+End Select
+循环体
+Wend
+```
+
+**脚本案例：**
+
+```
+//不支持判断语句 如：Case a>0
+Dim 变量=1
+Select Case 变量
+Case 0, 1 // 可支持判断多个值,中间以逗号隔开
+    TracePrint "你输入的数字为：0或者1"  
+Case 2
+    TracePrint "你输入的数字为：2" 
+Case 3
+    TracePrint "你输入的数字为：3" 
+Case 4
+    TracePrint "你输入的数字为：4" 
+Case 5
+    TracePrint "你输入的数字为：5" 
+Case 6
+    TracePrint "你输入的数字为：6" 
+Case 7
+    TracePrint "你输入的数字为：7" 
+Case 8
+    TracePrint "你输入的数字为：8" 
+Case 9
+    TracePrint "你输入的数字为：9" 
+Case Else
+    TracePrint "你输入的数字不正确，请输入（0~9）数字！"
+End Select
+```
 
 ### 循环语句
+#### Do 循环
+条件循环语句，可以是无限循环，也可以是有限循环。
+
+**脚本案例：**
+
+```
+例子1：
+//支持Exit Do 命令退出循环
+Do 
+    TracePrint "我停不下来啦!!快住手"
+Loop
+//最常见的无限循环（死循环）
+
+例子2：
+Dim i=0
+Do While i=0
+    TracePrint "我停不下来啦!!快住手"
+Loop
+//当循环条件成立的时候，反复执行循环体
+
+例子3：
+Dim i=0
+Do Until i=0
+    TracePrint "为什么没有循环到我呢？"
+Loop
+TracePrint "循环结束"
+//当循环条件成立的时候，离开循环体
+
+例子4：
+Dim i=0
+Do Until i=1
+    TracePrint "我停不下来啦!!快住手"
+Loop
+//当循环条件不成立的时候，反复执行循环体
+
+例子5：
+Dim i=0
+Do 
+   TracePrint "ok"
+Loop While i <> 0
+//条件放后面，前面的循环内容可以执行一次！
+
+例子6：
+Dim n=0
+Do While true
+    TracePrint "我将循环10次停下来!!"
+    If n>=10 Then
+        //当循环条件成立的时候，离开循环体
+        Exit do
+    End if
+    n=n+1
+Loop
+TracePrint n & "次"
+```
+
+#### For 循环
+循环语句，可以循环一定次数，也可以按照变量的起始数值到终止数值循环（如果不指定步长数值，默认步长为1）。
+
+**脚本案例：**
+
+```
+例子1：固定循环次数后离开
+For 10 '固定循环10次跳出
+    TracePrint "循环中……"
+Next
+TracePrint "离开循环"
+
+例子2：范围循环
+Dim i
+For i = 0 To 9 '这里没写步长，默认每次循环结束 i 都+1，那么10次后等于9，第11次等于10，大于9，离开循环
+    TracePrint "循环中，i=" & i
+Next
+TracePrint "离开循环，i=" & i
+
+Dim i
+For i = 0 To 19 Step 2 '步长为2，每次循环结束 i 都+2，那么10次后等于18，第11次等于20，大于19，离开循环
+    TracePrint "循环中，i=" & i
+Next
+TracePrint "离开循环，i=" & i
+
+Dim i
+For i = 9 To 0 Step -1 '步长为-1，每次循环结束 i 都-1，那么10次后等于0，第11次等于-1，小于0，离开循环
+    TracePrint "循环中，i=" & i
+Next
+TracePrint "离开循环，i=" & i
+
+例子3：循环离开
+Dim i
+i=5
+For i=0 To 10
+    TracePrint "循环中，i=" & i
+    If i=5 Then
+        Exit For '离开当前For循环
+    End If
+Next
+```
+
+#### For Each...In遍历循环
+对数组中的每个元素重复执行一段语句。
+
+**脚本案例：**
+
+```
+Dim Arr
+Arr=Array("我","爱","按","键","精","灵","!")
+For Each a In Arr 
+TracePrint  a    //输出数组的所有元素
+Next
+```
+
+#### While循环
+如果条件表达式成立，则循环执行对应语句。
+
+**脚本案例：**
+
+```
+例子1
+Dim i=0
+While i=0
+    TracePrint "我停不下来啦!!快住手"
+Wend
+//当循环条件成立的时候，反复执行循环体
+
+例子2
+Dim i
+i = 0
+//跳出循环
+While i < 10
+   i = i + 1
+   TracePrint "正在循环中，i=", i
+   If i = 5 then
+      TracePrint "准备退出循环"
+      Exit While
+   End If
+Wend
+TracePrint "循环结束，i=", i
+```
 
 ## 内置命令
 MQ语言中已经包含了下列名称的子程序（也称为内置命令），在脚本中可以随时调用。
