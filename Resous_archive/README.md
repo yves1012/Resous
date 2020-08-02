@@ -20,5 +20,5 @@
 * 微信号(备注网站)：***recently0216***
 * 微信二维码(备注网站)：
 <div align=center>
-	<img width = '150' height ='150' src ="http://photo.hugethanks.cn/wechat_furnace.jpg" alt="微信二维码"/>
+	<img width = '150' height ='150' src ="http://photo.hugethanks.cn/wechat_furnace.png" alt="微信二维码"/>
 </div>
