@@ -111,7 +111,9 @@ Updating / installing...
 
 系统重启后，软件会断开连接，等待3分钟左右服务器即可重启完毕，我们重新连接服务器，按图提示，我们继续复制命令：
 ```
-[root@vultr ~]# yum install net-tools -y && wget --no-check-certificate -O appex.sh https://raw.githubusercontent.com/0oVicero0/serverSpeeder_Install/master/appex.sh && bash appex.sh install
+// [root@vultr ~]# yum install net-tools -y && wget --no-check-certificate -O appex.sh https://raw.githubusercontent.com/0oVicero0/serverSpeeder_Install/master/appex.sh && bash appex.sh install
+
+wget -N --no-check-certificate https://raw.githubusercontent.com/91yun/serverspeeder/master/serverspeeder-all.sh && bash serverspeeder-all.sh
 ```
 
 回车后系统会自动下载脚本并执行，按图提示，我们直接回车继续即可：
